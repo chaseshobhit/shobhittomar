@@ -131,6 +131,14 @@
         display: flex;
         align-items: center;
         text-decoration: none;
+        gap: 0.6rem; /* MODIFIED: Added gap between icon and text */
+      }
+
+      /* MODIFIED: Added styles for the new logo icon */
+      .nav-logo-icon {
+        font-size: 1.9rem; 
+        color: #f0f0f5; 
+        line-height: 1; 
       }
 
       .nav-logo .brand-text {
@@ -139,8 +147,11 @@
         font-weight: 700;
         color: #f0f0f5; 
         text-decoration: none;
-        letter-spacing: 1px;
-        text-transform: uppercase;
+        /* MODIFIED: Removed letter-spacing and uppercase transform */
+        /* letter-spacing: 1px; */
+        /* text-transform: uppercase; */
+        text-transform: none;
+        letter-spacing: normal;
         /* MODIFIED: Removed blinking animation */
         /* animation: blinkEffect 1.5s linear infinite;  */
       }
@@ -804,6 +815,10 @@
          .nav-logo .brand-text { 
             font-size: 1.3rem; 
          }
+         /* MODIFIED: Added responsive size for the icon */
+         .nav-logo-icon {
+            font-size: 1.5rem;
+         }
          
         .hero-text .name {
             font-size: clamp(1.8rem, 10vw, 2.8rem); 
@@ -845,7 +860,9 @@
     <nav class="site-header">
       <div class="nav-logo">
         <a href="index.html">
-          <span class="brand-text">Shobhit Tomar</span>
+          <!-- MODIFIED: Added icon and changed text -->
+          <i class="fas fa-laptop-code nav-logo-icon"></i>
+          <span class="brand-text">chaseshobhit</span>
         </a>
       </div>
       <button class="hamburger">

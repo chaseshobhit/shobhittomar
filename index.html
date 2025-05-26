@@ -61,9 +61,9 @@
         --accent-color-link: #a7d7f9;
         --accent-color-link-hover: #ffffff;
 
-        --card-bg: transparent; /* Night: uses canvas */
+        --card-bg: transparent;
         --card-backdrop-filter: none;
-        --card-border: none; /* No border for night theme cards */
+        --card-border: none;
         --card-shadow: none;
         --card-padding: 25px;
 
@@ -173,160 +173,160 @@
         --theme-toggle-hover-bg: rgba(60, 65, 95, 0.9);
         --theme-toggle-shadow: 0 2px 8px rgba(0,0,0,0.3);
 
-
         /* Canvas Night Variables */
         --cv-night-bg-start: #000428;
-        --cv-night-bg-mid: #00093E;
-        --cv-night-bg-end: #0F204E;
+        --cv-night-bg-mid: #08103A;
+        --cv-night-bg-end: #101842;
         --cv-night-moon: #f0f0e0;
         --cv-night-moon-glow: rgba(240, 240, 224, 0.4);
-        --cv-night-cloud: rgba(200, 205, 225, 0.35);
+        --cv-night-cloud: rgba(180, 185, 205, 0.3);
         --cv-night-bird: #ffffff;
         --cv-night-star: rgba(255, 255, 255, 1);
         --cv-night-comet-head: rgba(220, 230, 255, 1);
         --cv-night-comet-glow: rgba(180, 200, 255, 0.5);
         --cv-night-falling-star-head: rgba(255, 255, 240, 1);
         --cv-night-falling-star-tail: rgba(255, 255, 230, 0.5);
-        
-        /* HORIZON COLORS FOR TRANSITION - Kept for reference but not used in current canvas logic */
-        --cv-dawn-horizon: #FFB07C; 
-        --cv-dusk-horizon: #FFA07A; 
+        --cv-night-fog: rgba(70, 80, 100, 0.28); /* MODIFIED: Reduced alpha */
+        --cv-night-leaf-color-1: #203020; 
+        --cv-night-leaf-stem-color: #152015;
 
 
         /* Canvas Day Variables */
-        --cv-day-bg-start: #87CEEB; /* SkyBlue */
-        --cv-day-bg-mid: #ADD8E6;   /* LightBlue */
-        --cv-day-bg-end: #B0E0E6;   /* PowderBlue */
-        --cv-day-sun: #FFD700;  /* Gold */
-        --cv-day-sun-glow: rgba(255, 223, 0, 0.7); /* Brighter Gold glow */
-        --cv-day-cloud: rgba(255, 255, 255, 0.85);
-        --cv-day-bird: #444444;
+        --cv-day-bg-start: #87CEEB;
+        --cv-day-bg-mid: #B0E0E6;
+        --cv-day-bg-end: #D4F0E0;
+        --cv-day-sun: #FFD700;
+        --cv-day-sun-glow: rgba(255, 223, 0, 0.7);
+        --cv-day-cloud: rgba(255, 255, 255, 0.80);
+        --cv-day-bird: #4A4A4A;
+        --cv-day-fog: rgba(220, 230, 240, 0.45); /* Adjusted day fog for visibility */
+        --cv-day-leaf-color-1: #558B2F;
+        --cv-day-leaf-stem-color: #4CAF50;
       }
 
       body.day-theme {
-        --bg-color: #e6f7ff;
+        --bg-color: #E6F7FF;
         --text-color: #333333;
         --text-color-light: #555555;
         --text-color-headings: #1a1a1a;
         --text-color-hero-intro: #4a5568;
         --text-color-hero-name: #1a202c;
-        --text-color-hero-designation: #2c5282;
-        --accent-color-primary: #007bff;
-        --accent-color-primary-hover: #0056b3;
-        --accent-color-link: #0056b3;
-        --accent-color-link-hover: #003f7f;
+        --text-color-hero-designation: #206A5D;
+        --accent-color-primary: #28a745;
+        --accent-color-primary-hover: #218838;
+        --accent-color-link: #206A5D;
+        --accent-color-link-hover: #1A5245;
 
-        /* Seamless cards for day theme */
         --card-bg: transparent;
         --card-backdrop-filter: none;
-        --card-border: none; /* REMOVED BORDER for day theme cards */
+        --card-border: none;
         --card-shadow: none;
 
-        --nav-bg: rgba(173, 216, 230, 0.65);
-        --nav-backdrop-filter: blur(10px) saturate(130%);
-        --nav-shadow: 0 1px 6px rgba(0,0,0,0.1);
+        --nav-bg: rgba(173, 216, 230, 0.55);
+        --nav-backdrop-filter: blur(10px) saturate(120%);
+        --nav-shadow: 0 1px 6px rgba(0,0,0,0.08);
         --nav-logo-text: #183D3D;
         --nav-logo-icon: #183D3D;
         --nav-link-text: #2c3e50;
-        --nav-link-text-hover: #007bff;
-        --nav-link-underline: #007bff;
-        --nav-mobile-bg: rgba(200, 225, 240, 0.85);
-        --nav-mobile-backdrop-filter: blur(8px) saturate(110%);
-        --nav-mobile-link-border: rgba(0,0,0,0.1);
-        --nav-mobile-link-hover-bg: rgba(0,0,0,0.05);
+        --nav-link-text-hover: var(--accent-color-primary);
+        --nav-link-underline: var(--accent-color-primary);
+        --nav-mobile-bg: rgba(200, 225, 240, 0.75);
+        --nav-mobile-backdrop-filter: blur(8px) saturate(100%);
+        --nav-mobile-link-border: rgba(0,0,0,0.08);
+        --nav-mobile-link-hover-bg: rgba(0,0,0,0.04);
 
         --progress-bar-bg: rgba(0,0,0,0.1);
-        --progress-bar-fill: #007bff;
+        --progress-bar-fill: var(--accent-color-primary);
 
-        --hero-button-bg: #007bff;
+        --hero-button-bg: var(--accent-color-primary);
         --hero-button-text: #ffffff;
-        --hero-button-border: 1px solid #0056b3;
-        --hero-button-hover-bg: #0056b3;
-        --hero-button-shadow: 0 4px 15px rgba(0, 123, 255, 0.25);
-        --hero-button-hover-shadow: 0 6px 20px rgba(0, 86, 179, 0.3);
+        --hero-button-border: 1px solid var(--accent-color-primary-hover);
+        --hero-button-hover-bg: var(--accent-color-primary-hover);
+        --hero-button-shadow: 0 4px 15px rgba(40, 167, 69, 0.25);
+        --hero-button-hover-shadow: 0 6px 20px rgba(33, 136, 56, 0.3);
         --social-icon-color: #4a5568;
-        --social-icon-hover-color: #007bff;
+        --social-icon-hover-color: var(--accent-color-primary);
 
-        --section-heading-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        --section-heading-shadow: 0 1px 2px rgba(0,0,0,0.08);
         --section-paragraph-color: #4a5568;
 
-        --education-university-link: #0056b3;
-        --education-university-link-hover: #007bff;
+        --education-university-link: var(--accent-color-link);
+        --education-university-link-hover: var(--accent-color-primary);
         --education-duration: #555;
-        --education-card-image-bg: rgba(0,0,0,0.05);
+        --education-card-image-bg: rgba(0,0,0,0.04);
 
-        --about-designation: #28a745;
-        --about-email-link: #0056b3;
-        --resume-button-bg: #007bff;
+        --about-designation: #206A5D;
+        --about-email-link: var(--accent-color-link);
+        --resume-button-bg: var(--accent-color-primary);
         --resume-button-text: #fff;
-        --resume-button-hover-bg: #0056b3;
+        --resume-button-hover-bg: var(--accent-color-primary-hover);
         --resume-button-border: 1px solid rgba(0,0,0,0.1);
-        --profile-image-border: 3px solid rgba(0,0,0,0.1);
-        --profile-image-shadow: 0 0 20px rgba(0,0,0,0.1);
+        --profile-image-border: 3px solid rgba(0,0,0,0.08);
+        --profile-image-shadow: 0 0 20px rgba(0,0,0,0.08);
 
-        --skill-category-border: 2px solid #007bff;
-        --skill-item-bg: rgba(0, 0, 0, 0.04);
+        --skill-category-border: 2px solid var(--accent-color-primary);
+        --skill-item-bg: rgba(40, 167, 69, 0.05);
         --skill-item-text: #333;
-        --skill-item-border: 1px solid rgba(0,0,0,0.05);
-        --skill-item-hover-bg: rgba(0, 0, 0, 0.08);
-        --skill-icon-filter: none; /* Reset night theme filter */
+        --skill-item-border: 1px solid rgba(40, 167, 69, 0.1);
+        --skill-item-hover-bg: rgba(40, 167, 69, 0.1);
+        --skill-icon-filter: none;
 
-        --timeline-line: rgba(0, 123, 255, 0.7);
-        --timeline-circle-bg: #f0f8ff;
-        --timeline-circle-border: #007bff;
+        --timeline-line: rgba(40, 167, 69, 0.7);
+        --timeline-circle-bg: #f0fff0;
+        --timeline-circle-border: var(--accent-color-primary);
         --timeline-time: #555;
-        --company-logo-bg: rgba(0,0,0,0.05);
-        --job-title-color: #0056b3;
-        --experience-link-color: #28a745;
-        --experience-link-hover-color: #1f7a34;
+        --company-logo-bg: rgba(0,0,0,0.04);
+        --job-title-color: var(--accent-color-link);
+        --experience-link-color: var(--accent-color-primary);
+        --experience-link-hover-color: var(--accent-color-primary-hover);
 
-        --portfolio-layer-bg: linear-gradient(to top, rgba(240, 248, 255, 0.95) 0%, rgba(240, 248, 255, 0.7) 60%, transparent 100%);
+        --portfolio-layer-bg: linear-gradient(to top, rgba(220, 240, 220, 0.95) 0%, rgba(220, 240, 220, 0.7) 60%, transparent 100%);
         --portfolio-layer-text: #2c3e50;
         --portfolio-layer-desc-text: #4a5568;
-        --portfolio-github-btn-bg: rgba(0,0,0,0.08);
+        --portfolio-github-btn-bg: rgba(0,0,0,0.07);
         --portfolio-github-btn-border: 1px solid rgba(0,0,0,0.1);
-        --portfolio-github-btn-hover-bg: rgba(0,0,0,0.12);
-        --portfolio-project-btn-bg: #007bff;
-        --portfolio-project-btn-border: 1px solid #0056b3;
-        --portfolio-project-btn-hover-bg: #0056b3;
+        --portfolio-github-btn-hover-bg: rgba(0,0,0,0.1);
+        --portfolio-project-btn-bg: var(--accent-color-primary);
+        --portfolio-project-btn-border: 1px solid var(--accent-color-primary-hover);
+        --portfolio-project-btn-hover-bg: var(--accent-color-primary-hover);
 
-        --contact-image-shadow: drop-shadow(0 0 15px rgba(0, 123, 255, 0.2));
-        --contact-icon-color: #007bff;
-        --contact-input-border: 1px solid rgba(0,0,0,0.15);
-        --contact-input-bg: rgba(255,255,255,0.7);
+        --contact-image-shadow: drop-shadow(0 0 15px rgba(40, 167, 69, 0.2));
+        --contact-icon-color: var(--accent-color-primary);
+        --contact-input-border: 1px solid rgba(0,0,0,0.12);
+        --contact-input-bg: rgba(255,255,255,0.65);
         --contact-input-text: #333;
         --contact-input-placeholder: #777;
-        --contact-input-focus-border: #007bff;
+        --contact-input-focus-border: var(--accent-color-primary);
         --contact-input-focus-bg: #fff;
-        --contact-input-focus-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
-        --contact-button-bg: #007bff;
+        --contact-input-focus-shadow: 0 0 0 2px rgba(40, 167, 69, 0.2);
+        --contact-button-bg: var(--accent-color-primary);
         --contact-button-text: #fff;
         --contact-button-border: 1px solid rgba(0,0,0,0.1);
-        --contact-button-hover-bg: #0056b3;
+        --contact-button-hover-bg: var(--accent-color-primary-hover);
 
-        --footer-bg: rgba(135, 206, 250, 0.7);
+        --footer-bg: rgba(180, 220, 180, 0.7);
         --footer-backdrop-filter: blur(4px);
         --footer-text: #2c3e50;
-        --footer-border-top: 1px solid rgba(0,0,0,0.1);
+        --footer-border-top: 1px solid rgba(0,0,0,0.08);
         --footer-section-heading: #1a202c;
-        --footer-hr-border: 1px solid rgba(0,0,0,0.1);
-        --footer-icon-color: #007bff;
+        --footer-hr-border: 1px solid rgba(0,0,0,0.08);
+        --footer-icon-color: var(--accent-color-primary);
         --footer-link-color: #2c3e50;
-        --footer-link-hover-color: #0056b3;
+        --footer-link-hover-color: var(--accent-color-link);
         --footer-social-icon: #4a5568;
-        --footer-social-icon-hover: #007bff;
+        --footer-social-icon-hover: var(--accent-color-primary);
         --heart-color: #dc3545;
         --dev-name-color: #1a202c;
 
-        --scroll-top-bg: #007bff;
+        --scroll-top-bg: var(--accent-color-primary);
         --scroll-top-text: #fff;
         --scroll-top-border: 1px solid rgba(0,0,0,0.1);
-        --scroll-top-hover-bg: #0056b3;
+        --scroll-top-hover-bg: var(--accent-color-primary-hover);
 
-        --theme-toggle-bg: rgba(220, 235, 245, 0.9);
+        --theme-toggle-bg: rgba(220, 235, 220, 0.9);
         --theme-toggle-icon: #183D3D;
-        --theme-toggle-hover-bg: rgba(200, 220, 235, 1);
-        --theme-toggle-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        --theme-toggle-hover-bg: rgba(200, 220, 200, 1);
+        --theme-toggle-shadow: 0 2px 8px rgba(0,0,0,0.12);
       }
 
       /* Global Resets and Base Styles */
@@ -351,6 +351,7 @@
         background-color: var(--bg-color);
         position: relative;
         transition: background-color 0.5s ease, color 0.5s ease;
+        overflow-x: hidden;
       }
 
       #nightSkyCanvas {
@@ -417,9 +418,9 @@
         align-items: center;
         text-decoration: none;
         gap: 0.6rem;
-        transition: transform 0.3s ease; 
+        transition: transform 0.3s ease;
       }
-      .nav-logo a:hover { 
+      .nav-logo a:hover {
         transform: scale(1.05);
       }
 
@@ -427,7 +428,7 @@
         font-size: 1.9rem;
         color: var(--nav-logo-icon);
         line-height: 1;
-        transition: color 0.3s ease; 
+        transition: color 0.3s ease;
       }
 
 
@@ -439,11 +440,11 @@
         text-decoration: none;
         text-transform: none;
         letter-spacing: normal;
-        transition: color 0.3s ease; 
+        transition: color 0.3s ease;
       }
 
 
-      .nav-controls { 
+      .nav-controls {
           display: flex;
           align-items: center;
       }
@@ -504,7 +505,6 @@
       }
 
 
-      /* Theme Toggle Button - Bottom Left */
       #theme-toggle {
         position: fixed;
         bottom: 20px;
@@ -522,7 +522,7 @@
         align-items: center;
         justify-content: center;
         box-shadow: var(--theme-toggle-shadow);
-        z-index: 1001; 
+        z-index: 1001;
         transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
       }
       #theme-toggle:hover {
@@ -530,8 +530,6 @@
         transform: scale(1.1) rotate(15deg);
       }
 
-
-      /* Progress Bar */
       #progress-bar {
         position: fixed;
         left: 0;
@@ -548,8 +546,6 @@
         transition: width 0.1s linear, background-color 0.5s ease;
       }
 
-
-      /* --- Hero Section --- */
       #hero {
         position: relative;
         color: var(--text-color);
@@ -612,17 +608,20 @@
         line-height: 1.1;
         text-transform: uppercase;
         letter-spacing: 1px;
-        transition: color 0.5s ease, transform 0.3s ease; 
+        transition: color 0.5s ease, transform 0.3s ease;
       }
-      .hero-text .name:hover { 
+      .hero-text .name:hover {
         transform: scale(1.03);
       }
 
-      .hero-text .name span { 
-        transition: color 0.3s ease; 
-        color: var(--accent-color-primary); 
+      .hero-text .name span {
+        transition: color 0.3s ease;
+        color: var(--accent-color-primary);
       }
-      .hero-text .name span:hover { 
+      body.day-theme .hero-text .name span {
+         color: var(--accent-color-primary);
+      }
+      .hero-text .name span:hover {
         color: var(--accent-color-primary-hover);
       }
 
@@ -694,7 +693,6 @@
         transform: translateY(-3px) scale(1.1);
       }
 
-      /* Sections Basic Styling */
       section {
         padding: 70px 2rem;
         background-color: transparent !important;
@@ -703,8 +701,7 @@
         transition: color 0.5s ease;
       }
 
-      /* For H2 elements that are DIRECT children of a section */
-      section > h2 { 
+      section > h2 {
         font-family: var(--font-roboto-condensed);
         font-size: clamp(2rem, 5vw, 2.8rem);
         color: var(--text-color-headings);
@@ -713,9 +710,9 @@
         text-transform: uppercase;
         letter-spacing: 1.5px;
         text-shadow: var(--section-heading-shadow);
-        transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease; 
+        transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
       }
-      section > h2:hover { 
+      section > h2:hover {
         color: var(--accent-color-primary);
         transform: scale(1.03);
       }
@@ -732,15 +729,13 @@
         transition: color 0.5s ease;
       }
 
-      /* Education Section */
       .education-container { max-width: 900px; margin: 0 auto; }
-      
-      /* My Education Heading Specific Styles */
-      .education-title { 
+
+      .education-title {
         font-family: var(--font-roboto-condensed);
         font-size: clamp(2rem, 5vw, 2.8rem);
         color: var(--text-color-headings);
-        text-align: center; 
+        text-align: center;
         margin-bottom: 45px;
         text-transform: uppercase;
         letter-spacing: 1.5px;
@@ -776,8 +771,6 @@
       .university-link:hover { text-decoration: underline; color: var(--education-university-link-hover); }
       .duration { color: var(--education-duration); font-size: 0.9rem; transition: color 0.5s ease; }
 
-
-      /* About Me Section */
       .about-container {
         display: flex;
         flex-wrap: wrap;
@@ -814,7 +807,6 @@
         transition: border-color 0.5s ease, box-shadow 0.5s ease;
       }
 
-      /* Skills Section */
       .skills-container {
         max-width: 1000px; margin: 0 auto;
         display: grid;
@@ -858,11 +850,10 @@
           filter: var(--skill-icon-filter);
       }
       body.day-theme .skill-icon {
-          filter: none;
+          filter: var(--skill-icon-filter);
       }
 
 
-      /* Experience Section */
       .timeline {
         position: relative;
         max-width: 800px;
@@ -920,8 +911,6 @@
       .experience-card ul li a { color: var(--experience-link-color); font-weight: bold; }
       .experience-card ul li a:hover { text-decoration: underline; color: var(--experience-link-hover-color); }
 
-
-      /* Portfolio Section */
       .portfolio--content {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -993,20 +982,20 @@
         color: var(--hero-button-text);
       }
       .github-btn { background-color: var(--portfolio-github-btn-bg); border: var(--portfolio-github-btn-border); }
+      body:not(.day-theme) .github-btn { color: var(--text-color); }
+      body.day-theme .github-btn { color: var(--text-color); }
+
       .github-btn:hover { background-color: var(--portfolio-github-btn-hover-bg); }
       .project-btn { background-color: var(--portfolio-project-btn-bg); border: var(--portfolio-project-btn-border);}
       .project-btn:hover { background-color: var(--portfolio-project-btn-hover-bg); }
 
-
-      /* Contact Section */
       .contact-section { max-width: 1000px; margin: 0 auto; }
-      
-      /* Get In Touch - Main Section Heading Specific Styles */
-      #contact .contact-section > h2 { /* Targets the "Get In Touch" heading */
+
+      #contact .contact-section > h2 {
         font-family: var(--font-roboto-condensed);
         font-size: clamp(2rem, 5vw, 2.8rem);
         color: var(--text-color-headings);
-        text-align: center; 
+        text-align: center;
         margin-bottom: 45px;
         text-transform: uppercase;
         letter-spacing: 1.5px;
@@ -1025,22 +1014,28 @@
         align-items: center;
       }
       .contact-image-container { flex: 1; min-width: 280px; text-align: center;}
-      .contact-image-container img { max-width: 350px; margin: 0 auto; filter: var(--contact-image-shadow); transition: filter 0.5s ease;}
-      
+      .contact-image-container img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        filter: var(--contact-image-shadow);
+        transition: filter 0.5s ease;
+      }
+
       .contact-form { flex: 1.2; min-width: 300px; }
-      /* This H2 is for "Send Me a Message" inside the form */
       .contact-form h2 {
         font-size: 1.8rem; color: var(--text-color-headings); margin-bottom: 25px;
         text-align: left;
         display: flex; align-items: center; gap: 10px;
-        transition: color 0.3s ease, transform 0.3s ease; 
+        transition: color 0.3s ease, transform 0.3s ease;
       }
-      .contact-form h2:hover { 
+      .contact-form h2:hover {
         color: var(--accent-color-primary);
         transform: scale(1.03);
       }
       .contact-form h2 i { color: var(--contact-icon-color); transition: color 0.5s ease;}
-      
+
       .form-group { margin-bottom: 20px; position: relative; }
       .form-group label {
         position: absolute; left: 15px; top: 50%;
@@ -1077,7 +1072,6 @@
       .contact-form button:hover { background-color: var(--contact-button-hover-bg); transform: translateY(-2px); }
 
 
-      /* Footer */
       footer {
         background-color: var(--footer-bg);
         backdrop-filter: var(--footer-backdrop-filter);
@@ -1104,9 +1098,9 @@
       .footer-section h3 {
         color: var(--footer-section-heading); font-size: 1.3rem;
         margin-bottom: 15px; font-family: var(--font-roboto-condensed);
-        transition: color 0.3s ease, transform 0.3s ease; 
+        transition: color 0.3s ease, transform 0.3s ease;
       }
-      .footer-section h3:hover { 
+      .footer-section h3:hover {
         color: var(--accent-color-primary);
         transform: scale(1.05);
       }
@@ -1140,22 +1134,22 @@
 
       .scroll-top {
         position: fixed;
-        bottom: 20px; 
+        bottom: 20px;
         right: 20px;
         background-color: var(--scroll-top-bg);
         color: var(--scroll-top-text);
-        width: 50px; 
+        width: 50px;
         height: 50px;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.3rem; 
+        font-size: 1.3rem;
         box-shadow: 0 3px 10px rgba(0,0,0,0.2);
         opacity: 0;
         visibility: hidden;
         transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-        z-index: 1001; 
+        z-index: 1001;
         border: var(--scroll-top-border);
       }
       .scroll-top.visible {
@@ -1165,7 +1159,6 @@
       }
       .scroll-top:hover { background-color: var(--scroll-top-hover-bg); transform: translateY(-3px); }
 
-      /* Responsive Adjustments */
       @media (max-width: 992px) {
         body { padding-top: 60px; }
         .site-header { padding: 0.8rem 1.5rem; }
@@ -1234,7 +1227,7 @@
          .nav-logo-icon {
             font-size: 1.5rem;
          }
-         #theme-toggle, .scroll-top { 
+         #theme-toggle, .scroll-top {
             width: 44px;
             height: 44px;
             font-size: 1.2rem;
@@ -1256,12 +1249,12 @@
             font-size: 0.9rem;
         }
         section { padding: 50px 1rem; }
-        
+
         section > h2,
         .education-title,
         #contact .contact-section > h2 {
-            font-size: clamp(1.8rem, 6vw, 2.2rem); 
-            margin-bottom: 35px; 
+            font-size: clamp(1.8rem, 6vw, 2.2rem);
+            margin-bottom: 35px;
         }
 
         .education-card { flex-direction: column; text-align: center; }
@@ -1277,6 +1270,85 @@
         .contact-form h2 { font-size: 1.5rem;}
 
         .about-text h3 {font-size: 1.5rem;}
+      }
+
+      @media (max-width: 375px) {
+          .hero-text .intro-text {
+              font-size: clamp(1rem, 2.2vw, 1.2rem);
+              letter-spacing: 1.5px;
+          }
+          .hero-text .name {
+              font-size: clamp(1.7rem, 9vw, 2.5rem);
+          }
+          .hero-text .designation .auto-type {
+              font-size: clamp(0.9rem, 4.5vw, 1.2rem);
+          }
+          .hero-button {
+              padding: 8px 18px;
+              font-size: 0.85rem;
+          }
+          .social-icons a {
+              font-size: 1.3rem;
+              margin: 0 8px;
+          }
+
+          section {
+              padding: 40px 0.75rem;
+          }
+          section > h2,
+          .education-title,
+          #contact .contact-section > h2 {
+              font-size: clamp(1.6rem, 5.5vw, 2rem);
+              margin-bottom: 30px;
+          }
+
+          .skill-items {
+              gap: 10px;
+          }
+          .skill-item {
+              padding: 8px 12px;
+              font-size: 0.9rem;
+          }
+          .skill-icon {
+              width: 20px; height: 20px;
+          }
+
+          .portfolio-item .layer-content h3 {
+              font-size: 1.1rem;
+          }
+           .portfolio-item .layer-content p {
+              font-size: 0.85rem;
+          }
+          .layer p {
+              font-size: 0.85rem;
+          }
+          .buttons a {
+              padding: 7px 12px;
+              font-size: 0.8rem;
+          }
+
+          .contact-form h2 {
+              font-size: 1.4rem;
+          }
+          .form-group input, .form-group textarea {
+              padding: 10px 10px 10px 40px;
+              font-size: 0.9rem;
+          }
+          .contact-form button {
+              padding: 10px 20px;
+              font-size: 0.9rem;
+          }
+
+          .footer-section h3 {
+              font-size: 1.2rem;
+          }
+          .footer-section p, .footer-section a, .footer-bottom p {
+              font-size: 0.85rem;
+          }
+          .footer-section .social-icons a {
+            font-size: 1.2rem;
+            margin-right: 12px;
+          }
       }
 
     </style>
@@ -1651,7 +1723,6 @@
                 <img src="assets/images/contact.png" alt="Contact illustration">
             </div>
             <div class="contact-form" data-aos="fade-left">
-                 <!-- This h2 is for "Send Me a Message" -->
                 <h2><i class="fas fa-paper-plane"></i> Send Me a Message</h2>
                 <form id="contact-form" action="https://formsubmit.co/shobhittomar1711@gmail.com" method="POST">
                   <input type="hidden" name="_subject" value="New message from portfolio site - Shobhit Tomar">
@@ -1721,23 +1792,24 @@ AOS.init({
   const nightSkyCanvasController = (function() {
     const canvas = document.getElementById('nightSkyCanvas');
     if (!canvas) {
-        // console.error("Night Sky Canvas not found!"); // Keep this commented or remove for production
         return { init: () => {}, switchToDay: () => {}, switchToNight: () => {}, setInitialTheme: () => {} };
     }
     const ctx = canvas.getContext('2d');
     let width, height;
-    let mouse = { x: undefined, y: undefined };
+    let mouse = { x: undefined, y: undefined, relativeX: 0, relativeY: 0 };
 
     let currentTheme = 'night';
     let transitionProgress = 0;
     let isTransitioning = false;
-    const TRANSITION_DURATION = 3000; // ms
+    const TRANSITION_DURATION = 3500;
+
+    const MAX_PARALLAX_OFFSET_X = 40;
+    const MAX_PARALLAX_OFFSET_Y = 20;
 
     let N_COLORS = {}, D_COLORS = {};
-    let DAWN_HORIZON_COLOR, DUSK_HORIZON_COLOR; 
 
     function getCssVar(varName) { return getComputedStyle(document.documentElement).getPropertyValue(varName).trim(); }
-    
+
     function updateThemeColorsFromCSS() {
         N_COLORS = {
             bgStart: getCssVar('--cv-night-bg-start'), bgMid: getCssVar('--cv-night-bg-mid'), bgEnd: getCssVar('--cv-night-bg-end'),
@@ -1746,14 +1818,18 @@ AOS.init({
             starBase: getCssVar('--cv-night-star'), cometHead: getCssVar('--cv-night-comet-head'),
             cometGlow: getCssVar('--cv-night-comet-glow'), fallingStarHead: getCssVar('--cv-night-falling-star-head'),
             fallingStarTail: getCssVar('--cv-night-falling-star-tail'),
+            fog: getCssVar('--cv-night-fog'),
+            leafColor1: getCssVar('--cv-night-leaf-color-1'),
+            leafStemColor: getCssVar('--cv-night-leaf-stem-color'),
         };
         D_COLORS = {
             bgStart: getCssVar('--cv-day-bg-start'), bgMid: getCssVar('--cv-day-bg-mid'), bgEnd: getCssVar('--cv-day-bg-end'),
             sun: getCssVar('--cv-day-sun'), sunGlow: getCssVar('--cv-day-sun-glow'),
             cloud: getCssVar('--cv-day-cloud'), bird: getCssVar('--cv-day-bird'),
+            fog: getCssVar('--cv-day-fog'),
+            leafColor1: getCssVar('--cv-day-leaf-color-1'),
+            leafStemColor: getCssVar('--cv-day-leaf-stem-color'),
         };
-        DAWN_HORIZON_COLOR = getCssVar('--cv-dawn-horizon'); 
-        DUSK_HORIZON_COLOR = getCssVar('--cv-dusk-horizon');   
     }
 
     function interpolateHexColor(color1, color2, factor) {
@@ -1771,29 +1847,37 @@ AOS.init({
         return `rgba(${r}, ${g}, ${b}, ${a})`;
     }
 
+    function getParallaxOffset(parallaxIntensity) {
+        return {
+            x: mouse.relativeX * MAX_PARALLAX_OFFSET_X * parallaxIntensity,
+            y: mouse.relativeY * MAX_PARALLAX_OFFSET_Y * parallaxIntensity
+        };
+    }
+
     let moon = {
         x: 0, y: 0, radius: 0, opacity: 1, baseRadius: 40,
         restX: 0, restY: 0,
         transitionStartX: 0, transitionStartY: 0, transitionEndX: 0, transitionEndY: 0,
+        parallaxIntensity: 0.3,
         init: function(initialProgress) {
             this.radius = this.baseRadius * Math.min(width/1200, height/800, 1) * 1.15;
             this.restX = width * 0.82; this.restY = height * 0.18;
-            this.transitionStartX = this.restX;
-            this.transitionStartY = this.restY;
-            this.transitionEndX = width * 0.95; 
-            this.transitionEndY = height * 0.1;
+            this.transitionStartX = this.restX; this.transitionStartY = this.restY;
+            this.transitionEndX = width * 0.95; this.transitionEndY = height * 0.1;
             this.updatePosition(initialProgress);
         },
         updatePosition: function(progressToDay) {
-            this.opacity = 1 - progressToDay;
-            this.opacity = Math.max(0, Math.min(1, this.opacity));
+            this.opacity = 1 - progressToDay; this.opacity = Math.max(0, Math.min(1, this.opacity));
+            let currentBaseX, currentBaseY;
             if (isTransitioning) {
-                this.x = this.transitionStartX + (this.transitionEndX - this.transitionStartX) * progressToDay;
-                this.y = this.transitionStartY + (this.transitionEndY - this.transitionStartY) * progressToDay;
-            } else { 
-                this.x = (currentTheme === 'night') ? this.restX : this.transitionEndX; 
-                this.y = (currentTheme === 'night') ? this.restY : this.transitionEndY;
+                currentBaseX = this.transitionStartX + (this.transitionEndX - this.transitionStartX) * progressToDay;
+                currentBaseY = this.transitionStartY + (this.transitionEndY - this.transitionStartY) * progressToDay;
+            } else {
+                currentBaseX = (currentTheme === 'night') ? this.restX : this.transitionEndX;
+                currentBaseY = (currentTheme === 'night') ? this.restY : this.transitionEndY;
             }
+            const parallax = getParallaxOffset(this.parallaxIntensity);
+            this.x = currentBaseX + parallax.x; this.y = currentBaseY + parallax.y;
         },
         draw: function() {
             if (this.opacity <= 0.01) return;
@@ -1809,30 +1893,30 @@ AOS.init({
             ctx.restore();
         }
     };
-
     let sun = {
         x: 0, y: 0, radius: 0, opacity: 0, baseRadius: 50,
         restX: 0, restY: 0,
         transitionStartX: 0, transitionStartY: 0, transitionEndX: 0, transitionEndY: 0,
+        parallaxIntensity: 0.35,
         init: function(initialProgress) {
             this.radius = this.baseRadius * Math.min(width/1200, height/800, 1) * 1.15;
             this.restX = width * 0.18; this.restY = height * 0.18;
-            this.transitionStartX = width * 0.05;
-            this.transitionStartY = height * 0.1;
-            this.transitionEndX = this.restX;
-            this.transitionEndY = this.restY;
+            this.transitionStartX = width * 0.05; this.transitionStartY = height * 0.1;
+            this.transitionEndX = this.restX; this.transitionEndY = this.restY;
             this.updatePosition(initialProgress);
         },
         updatePosition: function(progressToDay) {
-            this.opacity = progressToDay;
-            this.opacity = Math.max(0, Math.min(1, this.opacity));
+            this.opacity = progressToDay; this.opacity = Math.max(0, Math.min(1, this.opacity));
+            let currentBaseX, currentBaseY;
             if (isTransitioning) {
-                this.x = this.transitionStartX + (this.transitionEndX - this.transitionStartX) * progressToDay;
-                this.y = this.transitionStartY + (this.transitionEndY - this.transitionStartY) * progressToDay;
-            } else { 
-                this.x = (currentTheme === 'day') ? this.restX : this.transitionStartX;
-                this.y = (currentTheme === 'day') ? this.restY : this.transitionStartY;
+                currentBaseX = this.transitionStartX + (this.transitionEndX - this.transitionStartX) * progressToDay;
+                currentBaseY = this.transitionStartY + (this.transitionEndY - this.transitionStartY) * progressToDay;
+            } else {
+                currentBaseX = (currentTheme === 'day') ? this.restX : this.transitionStartX;
+                currentBaseY = (currentTheme === 'day') ? this.restY : this.transitionStartY;
             }
+            const parallax = getParallaxOffset(this.parallaxIntensity);
+            this.x = currentBaseX + parallax.x; this.y = currentBaseY + parallax.y;
         },
         draw: function() {
             if (this.opacity <= 0.01) return;
@@ -1840,99 +1924,230 @@ AOS.init({
             const pulse = Math.sin(Date.now() * 0.0012) * 0.05 + 0.95;
             ctx.shadowColor = D_COLORS.sunGlow; ctx.shadowBlur = this.radius * 1.8 * pulse;
             ctx.fillStyle = D_COLORS.sun;
-            ctx.beginPath(); ctx.arc(this.x, this.y, this.radius * pulse, 0, Math.PI * 2);
-            ctx.fill();
+            ctx.beginPath(); ctx.arc(this.x, this.y, this.radius * pulse, 0, Math.PI * 2); ctx.fill();
             const numRays = 10;
             for (let i = 0; i < numRays; i++) {
-                const angle = (i / numRays) * Math.PI * 2 + Date.now() * 0.00005; 
-                const length = this.radius * (0.2 + Math.sin(Date.now() * 0.0005 + i*0.5) * 0.05); 
+                const angle = (i / numRays) * Math.PI * 2 + Date.now() * 0.00005;
+                const length = this.radius * (0.2 + Math.sin(Date.now() * 0.0005 + i*0.5) * 0.05);
                 ctx.beginPath();
                 ctx.moveTo(this.x + Math.cos(angle) * this.radius * 1.05, this.y + Math.sin(angle) * this.radius * 1.05);
                 ctx.lineTo(this.x + Math.cos(angle) * (this.radius + length), this.y + Math.sin(angle) * (this.radius + length));
                 ctx.strokeStyle = D_COLORS.sunGlow.replace(/[\d.]+\)$/g, `${this.opacity * 0.25 * pulse})`);
-                ctx.lineWidth = 2.5 * pulse;
-                ctx.stroke();
+                ctx.lineWidth = 2.5 * pulse; ctx.stroke();
             }
             ctx.restore();
         }
     };
-
     let stars = []; const STAR_COUNT_TARGET = 180; const STAR_MAX_SIZE = 1.5; const STAR_MIN_SIZE = 0.3;
-    function Star(x, y, size) { this.x = x; this.y = y; this.size = size; this.opacity = Math.random() * 0.6 + 0.2; this.opacitySpeed = Math.random() * 0.025 + 0.008; this.opacityDirection = Math.random() < 0.5 ? 1 : -1; this.vx = (Math.random() - 0.5) * 0.08; this.vy = (Math.random() - 0.5) * 0.04; this.isVanishing = false; this.vanishTimer = 0;}
-    Star.prototype.draw = function(visibilityFactor) { if (this.opacity <= 0 || visibilityFactor <= 0.01) return; const starColor = N_COLORS.starBase.replace(/,\s*([\d.]+)\)/, `, ${this.opacity * visibilityFactor})`); ctx.fillStyle = starColor; ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2); ctx.fill();};
-    Star.prototype.update = function(visibilityFactor) { if (this.isVanishing) { this.vanishTimer--; if (this.vanishTimer <= 0) { this.isVanishing = false; this.opacity = 0.1; this.opacityDirection = 1; } else this.opacity = 0;  } else { this.opacity += this.opacitySpeed * this.opacityDirection; if (this.opacity > 1) { this.opacity = 1; this.opacityDirection *= -1; } else if (this.opacity < 0.1) {  this.opacity = 0.1;  this.opacityDirection *= -1; if (Math.random() < 0.15) { this.isVanishing = true; this.vanishTimer = Math.floor(Math.random() * 30) + 20;  this.opacity = 0; } } } this.x += this.vx; this.y += this.vy; if (this.x < -this.size) this.x = width + this.size; if (this.x > width + this.size) this.x = -this.size; if (this.y < -this.size) this.y = height + this.size; if (this.y > height + this.size) this.y = -this.size; this.draw(visibilityFactor);};
+    function Star(x, y, size) { this.baseX = x; this.baseY = y; this.x = x; this.y = y; this.size = size; this.opacity = Math.random() * 0.6 + 0.2; this.opacitySpeed = Math.random() * 0.025 + 0.008; this.opacityDirection = Math.random() < 0.5 ? 1 : -1; this.vx = (Math.random() - 0.5) * 0.08; this.vy = (Math.random() - 0.5) * 0.04; this.isVanishing = false; this.vanishTimer = 0; this.parallaxIntensity = Math.random() * 0.1 + 0.05; }
+    Star.prototype.draw = function(visibilityFactor) {
+        if (this.opacity <= 0 || visibilityFactor <= 0.01) return;
+        const starColor = N_COLORS.starBase.replace(/,\s*([\d.]+)\)/, `, ${this.opacity * visibilityFactor})`);
+        ctx.fillStyle = starColor; ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2); ctx.fill();
+    };
+    Star.prototype.update = function(visibilityFactor) {
+        if (this.isVanishing) { this.vanishTimer--; if (this.vanishTimer <= 0) { this.isVanishing = false; this.opacity = 0.1; this.opacityDirection = 1; } else this.opacity = 0;  } else { this.opacity += this.opacitySpeed * this.opacityDirection; if (this.opacity > 1) { this.opacity = 1; this.opacityDirection *= -1; } else if (this.opacity < 0.1) {  this.opacity = 0.1;  this.opacityDirection *= -1; if (Math.random() < 0.15) { this.isVanishing = true; this.vanishTimer = Math.floor(Math.random() * 30) + 20;  this.opacity = 0; } } }
+        this.baseX += this.vx; this.baseY += this.vy;
+        const parallax = getParallaxOffset(this.parallaxIntensity);
+        this.x = this.baseX + parallax.x; this.y = this.baseY + parallax.y;
+        if (this.baseX < -this.size) this.baseX = width + this.size; if (this.baseX > width + this.size) this.baseX = -this.size;
+        if (this.baseY < -this.size) this.baseY = height + this.size; if (this.baseY > height + this.size) this.baseY = -this.size;
+        this.draw(visibilityFactor);
+    };
     function initStars() { stars = []; const starCount = Math.min(STAR_COUNT_TARGET, Math.floor((width * height) / 7000)); for (let i = 0; i < starCount; i++) { const size = Math.random() * (STAR_MAX_SIZE - STAR_MIN_SIZE) + STAR_MIN_SIZE; const x = Math.random() * width; const y = Math.random() * height; stars.push(new Star(x, y, size)); }}
     let halleysComet; function Comet() { this.isActive = false; this.x = 0; this.y = 0; this.headRadius = 5; this.maxTailLength = 200; this.speedX = 0; this.speedY = 0; this.tailParticles = []; this.nextSpawnTime = Date.now() + 7000; this.spawnIntervalMin = 25000; this.spawnIntervalMax = 45000; } Comet.prototype.spawn = function() { this.isActive = true; this.headRadius = (Math.random() * 3 + 4) * Math.min(width, height) / 900; this.maxTailLength = this.headRadius * (Math.random() * 25 + 35); const angle = Math.random() * Math.PI * 0.35 - Math.PI * 0.175; const speedMagnitude = (Math.random() * 1.2 + 2.2) * (width / 1200); if (Math.random() < 0.5) { this.x = -this.maxTailLength * 0.3; this.y = Math.random() * height * 0.35; this.speedX = Math.cos(angle) * speedMagnitude; this.speedY = Math.sin(angle) * speedMagnitude * 0.8; } else { this.x = width + this.maxTailLength * 0.3; this.y = Math.random() * height * 0.35; this.speedX = -Math.cos(angle) * speedMagnitude; this.speedY = Math.sin(angle) * speedMagnitude * 0.8;} this.tailParticles = []; for (let i = 0; i < 30; i++) { this.tailParticles.push({ x: this.x - (this.speedX / speedMagnitude) * i * (this.headRadius*0.5), y: this.y - (this.speedY / speedMagnitude) * i * (this.headRadius*0.5), size: this.headRadius * (1 - i / 50) * 0.7, opacity: 0.8 - (i / 50) * 0.8 });}}; Comet.prototype.update = function() { if (!this.isActive) { if (Date.now() > this.nextSpawnTime) this.spawn(); return; } this.x += this.speedX; this.y += this.speedY; this.tailParticles.unshift({ x: this.x, y: this.y, size: this.headRadius * 0.8, opacity: 1 }); if (this.tailParticles.length > 120) this.tailParticles.pop(); for (let i = this.tailParticles.length - 1; i >= 0; i--) { const p = this.tailParticles[i]; p.opacity -= 0.012; p.size *= 0.985; if (p.opacity <= 0 || p.size < 0.1) this.tailParticles.splice(i, 1); } const offScreenBuffer = this.maxTailLength * 1.2; if (this.x < -offScreenBuffer || this.x > width + offScreenBuffer || this.y < -offScreenBuffer || this.y > height + offScreenBuffer) { if (this.tailParticles.length === 0 || this.tailParticles[this.tailParticles.length-1].opacity < 0.05) { this.isActive = false; this.nextSpawnTime = Date.now() + this.spawnIntervalMin + Math.random() * (this.spawnIntervalMax - this.spawnIntervalMin); }}}; Comet.prototype.draw = function(visibilityFactor) { if (!this.isActive || this.tailParticles.length < 2 || visibilityFactor <= 0.01) return; ctx.save(); ctx.globalAlpha = visibilityFactor; ctx.beginPath(); ctx.moveTo(this.tailParticles[0].x, this.tailParticles[0].y); for (let i = 1; i < this.tailParticles.length; i++) { const p = this.tailParticles[i]; const prev_p = this.tailParticles[i-1]; const xc = (p.x + prev_p.x) / 2; const yc = (p.y + prev_p.y) / 2; ctx.quadraticCurveTo(prev_p.x, prev_p.y, xc, yc); } const tailEndIndex = Math.max(0, this.tailParticles.length -1); const tailEndX = this.tailParticles[tailEndIndex].x; const tailEndY = this.tailParticles[tailEndIndex].y; const baseCometHeadColor = N_COLORS.cometHead.replace(/,\s*1\)/, `, ${Math.min(1, this.tailParticles[0].opacity * 0.7)})`); const baseCometMidTailColor = N_COLORS.cometHead.replace(/,\s*1\)/, `, ${Math.min(1, this.tailParticles[0].opacity * 0.3)})`); const baseCometEndTailColor = N_COLORS.cometHead.replace(/,\s*1\)/, `, 0)`); const gradient = ctx.createLinearGradient(this.x, this.y, tailEndX, tailEndY); gradient.addColorStop(0, baseCometHeadColor); gradient.addColorStop(0.7, baseCometMidTailColor); gradient.addColorStop(1, baseCometEndTailColor); ctx.strokeStyle = gradient; ctx.lineWidth = this.headRadius * 1.2 * Math.min(1, this.tailParticles[0].opacity); ctx.lineCap = 'round'; ctx.lineJoin = 'round'; ctx.stroke(); ctx.shadowColor = N_COLORS.cometGlow; ctx.shadowBlur = this.headRadius * 3.5; ctx.fillStyle = N_COLORS.cometHead; ctx.beginPath(); ctx.arc(this.x, this.y, this.headRadius, 0, Math.PI * 2); ctx.fill(); ctx.restore(); };
-    let fallingStars = []; const MAX_FALLING_STARS = 3; let nextFallingStarSpawnTime = 0; const FS_SPAWN_INTERVAL_MIN = 700; const FS_SPAWN_INTERVAL_MAX = 3500; function FallingStar() { this.isActive = false; this.x = 0; this.y = 0; this.initialSize = 0; this.currentSize = 0; this.speedY = 0; this.opacity = 0; this.tailLength = 0;} FallingStar.prototype.spawn = function() { this.isActive = true; this.x = Math.random() * width; this.y = Math.random() * height * 0.05 - 20; this.initialSize = Math.random() * 1.0 + 0.6; this.currentSize = this.initialSize; this.speedY = Math.random() * 6 + 7; this.opacity = 1; this.tailLength = Math.random() * 50 + 30; }; FallingStar.prototype.update = function() { if (!this.isActive) return; this.y += this.speedY; this.currentSize += 0.12; this.opacity -= 0.018; if (this.y > height + this.tailLength || this.opacity <= 0) this.isActive = false;}; FallingStar.prototype.draw = function(visibilityFactor) { if (!this.isActive || this.opacity <= 0 || visibilityFactor <= 0.01) return; ctx.save(); ctx.globalAlpha = this.opacity * visibilityFactor; const headX = this.x; const headY = this.y; const tailColor = N_COLORS.fallingStarTail.replace(/,\s*([\d.]+)\)/, `, ${0.5 * this.opacity * visibilityFactor})`); const headColor = N_COLORS.fallingStarHead.replace(/,\s*([\d.]+)\)/, `, ${this.opacity * visibilityFactor})`); ctx.beginPath(); ctx.moveTo(headX, headY); ctx.lineTo(headX, headY - this.tailLength * this.opacity); ctx.strokeStyle = tailColor; ctx.lineWidth = this.currentSize * 0.5; ctx.lineCap = 'round'; ctx.stroke(); ctx.fillStyle = headColor; ctx.beginPath(); ctx.arc(headX, headY, this.currentSize, 0, Math.PI * 2); ctx.fill(); ctx.restore();}; function manageFallingStars(visibilityFactor) { if (Date.now() > nextFallingStarSpawnTime) { const activeCount = fallingStars.reduce((count, fs) => count + (fs.isActive ? 1 : 0), 0); if (activeCount < MAX_FALLING_STARS) { let fs = fallingStars.find(s => !s.isActive); if (!fs) { fs = new FallingStar(); fallingStars.push(fs); } fs.spawn(); nextFallingStarSpawnTime = Date.now() + FS_SPAWN_INTERVAL_MIN + Math.random() * (FS_SPAWN_INTERVAL_MAX - FS_SPAWN_INTERVAL_MIN);}} for (let i = fallingStars.length - 1; i >= 0; i--) { if (fallingStars[i].isActive) { fallingStars[i].update(); fallingStars[i].draw(visibilityFactor); }}};
-    let clouds = []; const CLOUD_COUNT_TARGET = 7; const CLOUD_INTERACTION_FACTOR = 0.02; const CLOUD_MOUSE_RADIUS_EFFECT = 150; function Cloud(x,y,speed,numPuffs,baseSize) { this.x=x;this.initialY=y;this.y=y;this.speed=speed;this.puffs=[];this.baseSize=baseSize;for(let i=0;i<numPuffs;i++){this.puffs.push({dx:(Math.random()-.5)*baseSize*1.6,dy:(Math.random()-.5)*baseSize*.5,radius:(Math.random()*.5+.3)*baseSize*.6})}} Cloud.prototype.draw = function(cloudColor) { ctx.fillStyle=cloudColor;this.puffs.forEach(puff=>{ctx.beginPath();ctx.arc(this.x+puff.dx,this.y+puff.dy,puff.radius,0,Math.PI*2);ctx.fill()})}; Cloud.prototype.update = function(cloudColor) { this.x+=this.speed;const visualWidth=this.baseSize*2;if(this.speed>0&&this.x-visualWidth>width){this.x=-visualWidth-Math.random()*50;this.y=this.initialY=Math.random()*height*.4+height*.05}else if(this.speed<0&&this.x+visualWidth<0){this.x=width+visualWidth+Math.random()*50;this.y=this.initialY=Math.random()*height*.4+height*.05}let targetY=this.initialY;if(mouse.x!==undefined&&mouse.y!==undefined){const distToMouseX=mouse.x-this.x;const distToMouseY=mouse.y-this.y;const distance=Math.sqrt(distToMouseX*distToMouseX+distToMouseY*distToMouseY);if(distance<CLOUD_MOUSE_RADIUS_EFFECT+this.baseSize){const influence=1-distance/(CLOUD_MOUSE_RADIUS_EFFECT+this.baseSize);targetY+=(this.y-mouse.y)*CLOUD_INTERACTION_FACTOR*influence*2.5}}this.y+=(targetY-this.y)*.04;this.draw(cloudColor)}; function initClouds() { clouds=[];const cloudCount=Math.min(CLOUD_COUNT_TARGET,Math.floor(width/200));for(let i=0;i<cloudCount;i++){const speed=(Math.random()*.85+.35)*(Math.random()<.5?1:-1)*(width/1000);const baseSize=(Math.random()*20+10)*(width/1200+.4);const x=Math.random()*width;const y=Math.random()*height*.4+height*.05;const numPuffs=Math.floor(Math.random()*3)+3;clouds.push(new Cloud(x,y,speed,numPuffs,baseSize))}}
-    const NUM_BIRDS = 1; let birds = []; const BIRD_SIZE_BASE = 25; let birdSize = BIRD_SIZE_BASE; let visibleHeadingsCache = []; let lastHeadingUpdateTime = 0; const HEADING_UPDATE_INTERVAL = 10000; function Bird() { this.x=Math.random()*width;this.y=Math.random()*height*.6;this.size=birdSize*(Math.random()*.3+.85);this.state='FLYING_RANDOMLY';this.targetX=Math.random()*width;this.targetY=Math.random()*(height-this.size*2)+this.size;this.speedMagnitude=(Math.random()*.6+.9)*(width/1000);this.angle=Math.random()*Math.PI*2;this.speedX=Math.cos(this.angle)*this.speedMagnitude;this.speedY=Math.sin(this.angle)*this.speedMagnitude;this.wingPosition=Math.random()*Math.PI*2;this.wingDirection=.08+Math.random()*.07;this.turnSpeed=.03+Math.random()*.02;this.targetElement=null;this.sitDuration=0;this.sitTimer=0;this.takeoffTimer=0;this.isGliding=Math.random()<.8;this.actionTimer=0;this.minGlideTime=3e3;this.maxGlideTime=7e3;this.minFlapTime=400;this.maxFlapTime=1e3;this.setNextAction()} Bird.prototype.setNextAction = function() { if(this.isGliding)this.actionTimer=this.minFlapTime+Math.random()*(this.maxFlapTime-this.minFlapTime);else this.actionTimer=this.minGlideTime+Math.random()*(this.maxGlideTime-this.minGlideTime);this.isGliding=!this.isGliding}; Bird.prototype.findNewTarget = function() { this.targetElement=null;if(visibleHeadingsCache.length>0&&Math.random()<.4){const randomHeading=visibleHeadingsCache[Math.floor(Math.random()*visibleHeadingsCache.length)];let headingAlreadyTargeted=!1;for(const otherBird of birds)if(otherBird!==this&&otherBird.targetElement===randomHeading.element){headingAlreadyTargeted=!0;break}if(!headingAlreadyTargeted||Math.random()<.3){this.targetElement=randomHeading.element;this.targetX=randomHeading.x;this.targetY=randomHeading.y-this.size*1.5;this.state='FLYING_TO_HEADING';return}}this.targetX=Math.random()*(width-this.size*2)+this.size;this.targetY=Math.random()*(height-this.size*2)+this.size;this.state='FLYING_RANDOMLY'}; Bird.prototype.update = function() { let dx=this.targetX-this.x,dy=this.targetY-this.y;let distance=Math.sqrt(dx*dx+dy*dy);this.wingPosition+=this.wingDirection;switch(this.state){case'FLYING_RANDOMLY':case'FLYING_TO_HEADING':this.actionTimer-=frameInterval;if(this.actionTimer<=0)this.setNextAction();if(distance<this.speedMagnitude*20){if(this.state==='FLYING_TO_HEADING'&&this.targetElement){const rect=this.targetElement.getBoundingClientRect();const isVisible=rect.top<window.innerHeight&&rect.bottom>0&&rect.left<window.innerWidth&&rect.right>0;if(isVisible){this.state='SITTING';this.sitDuration=3e3+Math.random()*4e3;this.sitTimer=this.sitDuration;this.x=this.targetX;this.y=this.targetY}else this.findNewTarget()}else this.findNewTarget()}else{let targetAngle=Math.atan2(dy,dx);let angleDiff=targetAngle-this.angle;while(angleDiff>Math.PI)angleDiff-=Math.PI*2;while(angleDiff<-Math.PI)angleDiff+=Math.PI*2;this.angle+=Math.sign(angleDiff)*Math.min(Math.abs(angleDiff),this.turnSpeed);this.speedX=Math.cos(this.angle)*this.speedMagnitude;this.speedY=Math.sin(this.angle)*this.speedMagnitude;this.x+=this.speedX;this.y+=this.speedY}break;case'SITTING':this.sitTimer-=frameInterval;if(this.sitTimer<=0){this.state='PREPARE_TAKEOFF';this.takeoffTimer=500+Math.random()*500;this.isGliding=!1;this.actionTimer=this.minFlapTime+Math.random()*(this.maxFlapTime-this.minFlapTime)}if(this.targetElement){const rect=this.targetElement.getBoundingClientRect();const isVisible=rect.top<window.innerHeight&&rect.bottom>0;if(!isVisible||Math.abs(rect.left+rect.width/2-this.x)>20||Math.abs(rect.top-this.size*1.5-this.y)>20){this.findNewTarget()}else{this.targetX=rect.left+rect.width/2;this.targetY=rect.top-this.size*1.5;this.x=this.targetX;this.y=this.targetY}}break;case'PREPARE_TAKEOFF':this.takeoffTimer-=frameInterval;if(this.takeoffTimer<=0)this.findNewTarget();break}const wrapBuffer=this.size*3;if(this.state!=='SITTING'&&this.state!=='PREPARE_TAKEOFF'){if(this.x<-wrapBuffer)this.x=width+wrapBuffer*.9;else if(this.x>width+wrapBuffer)this.x=-wrapBuffer*.9;if(this.y<-wrapBuffer)this.y=height+wrapBuffer*.9;else if(this.y>height+wrapBuffer)this.y=-wrapBuffer*.9}else{this.x=Math.max(this.size,Math.min(this.x,width-this.size));this.y=Math.max(this.size,Math.min(this.y,height-this.size))}}; Bird.prototype.draw = function(birdColor) { ctx.save();ctx.translate(this.x,this.y);ctx.rotate(this.angle+Math.PI/2);ctx.fillStyle=birdColor;let wingFlap=0;const s=this.size;if(this.state==='SITTING'||this.state==='PREPARE_TAKEOFF'){wingFlap=Math.sin(this.wingPosition*.5)*.1;ctx.beginPath();ctx.moveTo(0,-s*.6);ctx.lineTo(-s*.3+wingFlap*s*.1,s*.1+wingFlap*s*.05);ctx.lineTo(-s*.2,s*.5);ctx.lineTo(0,s*.6);ctx.lineTo(s*.2,s*.5);ctx.lineTo(s*.3-wingFlap*s*.1,s*.1+wingFlap*s*.05);ctx.closePath();ctx.fill()}else{if(this.isGliding)wingFlap=Math.sin(this.wingPosition)*.15+.2;else wingFlap=Math.sin(this.wingPosition)*.6;ctx.beginPath();ctx.moveTo(0,-s*.7);ctx.quadraticCurveTo(-s*.1,-s*.5,-s*.2,0);ctx.lineTo(-s*.15,s*.6);ctx.lineTo(0,s*.8);ctx.lineTo(s*.15,s*.6);ctx.lineTo(s*.2,0);ctx.quadraticCurveTo(s*.1,-s*.5,0,-s*.7);ctx.closePath();ctx.fill();ctx.beginPath();ctx.moveTo(-s*.1,-s*.1);ctx.quadraticCurveTo(-s*.6,-s*.2+wingFlap*s*.3,-s*1.2,s*.1+wingFlap*s*.2);ctx.quadraticCurveTo(-s*.5,s*.3+wingFlap*s*.1,-s*.15,s*.15);ctx.closePath();ctx.fill();ctx.beginPath();ctx.moveTo(s*.1,-s*.1);ctx.quadraticCurveTo(s*.6,-s*.2+wingFlap*s*.3,s*1.2,s*.1+wingFlap*s*.2);ctx.quadraticCurveTo(s*.5,s*.3+wingFlap*s*.1,s*.15,s*.15);ctx.closePath();ctx.fill()}ctx.restore()}; function updateVisibleHeadings() { visibleHeadingsCache=[];const headingElements=document.querySelectorAll('section > h2, .education-title, #contact .contact-section > h2, .contact-form h2, .footer-section h3'); /* Updated selector for headings */ headingElements.forEach(el=>{const rect=el.getBoundingClientRect();if(rect.top<window.innerHeight&&rect.bottom>0&&rect.left<window.innerWidth&&rect.right>0){visibleHeadingsCache.push({element:el,x:rect.left+rect.width/2,y:rect.top})}})}; function initBirds() { birds=[];for(let i=0;i<NUM_BIRDS;i++)birds.push(new Bird());updateVisibleHeadings()};
+    let fallingStars = []; const MAX_FALLING_STARS = 3; let nextFallingStarSpawnTime = 0; const FS_SPAWN_INTERVAL_MIN = 700; const FS_SPAWN_INTERVAL_MAX = 3500; function FallingStar() { this.isActive = false; this.x = 0; this.y = 0; this.initialSize = 0; this.currentSize = 0; this.speedY = 0; this.opacity = 0; this.tailLength = 0; this.parallaxIntensity = 0.15; } FallingStar.prototype.spawn = function() { this.isActive = true; this.x = Math.random() * width; this.y = Math.random() * height * 0.05 - 20; this.initialSize = Math.random() * 1.0 + 0.6; this.currentSize = this.initialSize; this.speedY = Math.random() * 6 + 7; this.opacity = 1; this.tailLength = Math.random() * 50 + 30; }; FallingStar.prototype.update = function() { if (!this.isActive) return; this.y += this.speedY; this.currentSize += 0.12; this.opacity -= 0.018; if (this.y > height + this.tailLength || this.opacity <= 0) this.isActive = false;}; FallingStar.prototype.draw = function(visibilityFactor) { if (!this.isActive || this.opacity <= 0 || visibilityFactor <= 0.01) return; ctx.save(); ctx.globalAlpha = this.opacity * visibilityFactor; const parallax = getParallaxOffset(this.parallaxIntensity); const currentX = this.x + parallax.x; const headX = currentX; const headY = this.y; const tailColor = N_COLORS.fallingStarTail.replace(/,\s*([\d.]+)\)/, `, ${0.5 * this.opacity * visibilityFactor})`); const headColor = N_COLORS.fallingStarHead.replace(/,\s*([\d.]+)\)/, `, ${this.opacity * visibilityFactor})`); ctx.beginPath(); ctx.moveTo(headX, headY); ctx.lineTo(headX, headY - this.tailLength * this.opacity); ctx.strokeStyle = tailColor; ctx.lineWidth = this.currentSize * 0.5; ctx.lineCap = 'round'; ctx.stroke(); ctx.fillStyle = headColor; ctx.beginPath(); ctx.arc(headX, headY, this.currentSize, 0, Math.PI * 2); ctx.fill(); ctx.restore();}; function manageFallingStars(visibilityFactor) { if (Date.now() > nextFallingStarSpawnTime) { const activeCount = fallingStars.reduce((count, fs) => count + (fs.isActive ? 1 : 0), 0); if (activeCount < MAX_FALLING_STARS) { let fs = fallingStars.find(s => !s.isActive); if (!fs) { fs = new FallingStar(); fallingStars.push(fs); } fs.spawn(); nextFallingStarSpawnTime = Date.now() + FS_SPAWN_INTERVAL_MIN + Math.random() * (FS_SPAWN_INTERVAL_MAX - FS_SPAWN_INTERVAL_MIN);}} for (let i = fallingStars.length - 1; i >= 0; i--) { if (fallingStars[i].isActive) { fallingStars[i].update(); fallingStars[i].draw(visibilityFactor); }}}
+    let clouds = []; const CLOUD_COUNT_TARGET = 7; const CLOUD_MOUSE_RADIUS_EFFECT = 150; function Cloud(x,y,speed,numPuffs,baseSize) { this.baseX = x; this.initialY = y; this.y = y; this.speed = speed; this.puffs=[]; this.baseSize = baseSize; this.parallaxIntensity = Math.random() * 0.2 + 0.2; for(let i=0;i<numPuffs;i++){this.puffs.push({dx:(Math.random()-.5)*baseSize*1.6,dy:(Math.random()-.5)*baseSize*.5,radius:(Math.random()*.5+.3)*baseSize*.6})}} Cloud.prototype.draw = function(cloudColor) { ctx.fillStyle=cloudColor; this.puffs.forEach(puff=>{ctx.beginPath();ctx.arc(this.currentX+puff.dx,this.currentY+puff.dy,puff.radius,0,Math.PI*2);ctx.fill()})}; Cloud.prototype.update = function(cloudColor) { this.baseX += this.speed; const visualWidth = this.baseSize * 2; if (this.speed > 0 && this.baseX - visualWidth > width) { this.baseX = -visualWidth - Math.random()*50; this.initialY = Math.random()*height*.4 + height*.05; } else if (this.speed < 0 && this.baseX + visualWidth < 0) { this.baseX = width + visualWidth + Math.random()*50; this.initialY = Math.random()*height*.4 + height*.05; } let targetY = this.initialY; const parallax = getParallaxOffset(this.parallaxIntensity); this.currentX = this.baseX + parallax.x; const cloudCenterYForMouse = this.y + parallax.y; if (mouse.x !== undefined && mouse.y !== undefined) { const distToMouseX = mouse.x - this.currentX; const distToMouseY = mouse.y - cloudCenterYForMouse; const distance = Math.sqrt(distToMouseX*distToMouseX + distToMouseY*distToMouseY); if (distance < CLOUD_MOUSE_RADIUS_EFFECT + this.baseSize) { const influence = 1 - distance / (CLOUD_MOUSE_RADIUS_EFFECT + this.baseSize); targetY += (this.y - mouse.y) * 0.02 * influence * 2.5; }} this.y += (targetY - this.y) * 0.04; this.currentY = this.y + parallax.y; this.draw(cloudColor);}; function initClouds() { clouds=[];const cloudCount=Math.min(CLOUD_COUNT_TARGET,Math.floor(width/200));for(let i=0;i<cloudCount;i++){const speed=(Math.random()*.85+.35)*(Math.random()<.5?1:-1)*(width/1000);const baseSize=(Math.random()*20+10)*(width/1200+.4);const x=Math.random()*width;const y=Math.random()*height*.4+height*.05;const numPuffs=Math.floor(Math.random()*3)+3;clouds.push(new Cloud(x,y,speed,numPuffs,baseSize))}}
+
+    // Fog System
+    let fogParticles = []; 
+    const FOG_PARTICLE_COUNT = 40; // MODIFIED: Reduced count for scatter
+    const FOG_BASE_SPEED_X = 0.3;  // Increased base speed
+    const FOG_SPEED_X_VAR = 0.15; // Increased speed variation
+
+    function FogParticle() {
+        this.x = Math.random() * width;
+        this.y = Math.random() * height; 
+        this.radius = Math.random() * 50 + 30 * (width / 1200); // MODIFIED: Slightly smaller base radius
+        this.opacity = Math.random() * 0.25 + 0.10; // MODIFIED: Reduced individual opacity for scatter
+        this.speedX = FOG_BASE_SPEED_X + Math.random() * FOG_SPEED_X_VAR; 
+        this.speedY = 0; 
+        this.parallaxIntensity = Math.random() * 0.06 + 0.03; 
+    }
+    FogParticle.prototype.update = function() {
+        this.x += this.speedX;
+
+        if (this.speedX > 0 && this.x - this.radius > width) {
+             this.x = -this.radius - Math.random() * width * 0.3; 
+             this.y = Math.random() * height; 
+        }
+    };
+    FogParticle.prototype.draw = function(fogColor) {
+        const parallax = getParallaxOffset(this.parallaxIntensity);
+        const currentX = this.x + parallax.x;
+        const currentY = this.y + parallax.y; 
+
+        ctx.save();
+        const targetAlphaMatch = fogColor.match(/rgba?\(.*,\s*([\d.]+)\)/);
+        const targetAlpha = targetAlphaMatch ? parseFloat(targetAlphaMatch[1]) : 0.2; 
+
+        const alphaScaleFactor = targetAlpha / 0.25; 
+        const particleEffectiveOpacity = Math.min(1, this.opacity * alphaScaleFactor);
+
+        const centerColorAlpha = Math.min(1, particleEffectiveOpacity * 0.7); 
+        const centerColor = fogColor.replace(/[\d.]+(?=\))/, centerColorAlpha.toFixed(3) );
+        const edgeColor = fogColor.replace(/[\d.]+(?=\))/, '0');
+
+        const fogGradient = ctx.createRadialGradient(currentX, currentY, this.radius * 0.05, currentX, currentY, this.radius);
+        fogGradient.addColorStop(0, centerColor);
+        fogGradient.addColorStop(1, edgeColor);
+
+        ctx.fillStyle = fogGradient;
+        ctx.beginPath(); ctx.arc(currentX, currentY, this.radius, 0, Math.PI * 2); ctx.fill();
+        ctx.restore();
+    };
+    function initFog() {
+        fogParticles = [];
+        for (let i = 0; i < FOG_PARTICLE_COUNT; i++) {
+            fogParticles.push(new FogParticle());
+        }
+    }
+
+    // Leaf Particle System
+    let leafParticles = [];
+    const MAX_LEAF_PARTICLES = 25;
+    function LeafParticle() { this.respawn(); }
+    LeafParticle.prototype.respawn = function() {
+        this.size = Math.random() * 8 + 5 * (Math.min(width, height) / 800);
+        this.type = Math.random() < 0.6 ? 'oval' : 'pointed';
+        const spawnEdge = Math.floor(Math.random() * 3); 
+        if (spawnEdge === 0) { this.baseX = -this.size * 2 - Math.random() * 50; this.baseY = Math.random() * height * 0.8; this.speedX = Math.random() * 0.8 + 0.4; }
+        else if (spawnEdge === 1) { this.baseX = width + this.size * 2 + Math.random() * 50; this.baseY = Math.random() * height * 0.8; this.speedX = -(Math.random() * 0.8 + 0.4); }
+        else { this.baseX = Math.random() * width; this.baseY = -this.size * 2 - Math.random() * 30; this.speedX = (Math.random() - 0.5) * 0.6; }
+        this.x = this.baseX; this.y = this.baseY;
+        this.speedY = Math.random() * 0.5 + 0.3;
+        this.rotation = Math.random() * Math.PI * 2; this.rotationSpeed = (Math.random() - 0.5) * 0.03;
+        this.swayAngle = Math.random() * Math.PI * 2; this.swayAmplitude = Math.random() * (this.size * 0.5) + (this.size * 0.2); this.swayFrequency = Math.random() * 0.03 + 0.01;
+        this.opacity = 0; this.targetOpacity = Math.random() * 0.4 + 0.5;
+        this.life = Math.random() * 3000 + 5000; this.age = 0;
+        this.parallaxIntensity = Math.random() * 0.3 + 0.4;
+    };
+    LeafParticle.prototype.update = function(deltaTime) {
+        this.age += deltaTime;
+        if (this.age > this.life) { this.opacity -= 0.015; if (this.opacity <= 0) { this.respawn(); return; } }
+        else { if (this.opacity < this.targetOpacity) { this.opacity += 0.012; } }
+        this.baseX += this.speedX * (deltaTime / 16.67); this.baseY += this.speedY * (deltaTime / 16.67);
+        this.rotation += this.rotationSpeed; this.swayAngle += this.swayFrequency;
+        const swayOffsetX = Math.sin(this.swayAngle) * this.swayAmplitude;
+        const parallax = getParallaxOffset(this.parallaxIntensity);
+        this.x = this.baseX + swayOffsetX + parallax.x; this.y = this.baseY + parallax.y;
+        const offScreenBuffer = this.size * 4;
+        if (this.opacity <=0.01 && (this.x < -offScreenBuffer || this.x > width + offScreenBuffer || this.y > height + offScreenBuffer || (this.y < -offScreenBuffer && this.speedY < 0) )) {
+            this.respawn();
+        }
+    };
+    LeafParticle.prototype.draw = function() {
+        const visibilityFactor = Math.max(0, Math.min(1, (transitionProgress - 0.05) / 0.4)); 
+        if (this.opacity * visibilityFactor <= 0.01) return;
+
+        ctx.save(); ctx.translate(this.x, this.y); ctx.rotate(this.rotation);
+        ctx.globalAlpha = this.opacity * visibilityFactor;
+        const s = this.size;
+        ctx.fillStyle = this.currentColors.leaf1; ctx.beginPath();
+        if (this.type === 'oval') { ctx.ellipse(0, 0, s * 0.4, s, 0, 0, Math.PI * 2); }
+        else { ctx.moveTo(0, -s); ctx.quadraticCurveTo(s * 0.4, -s * 0.3, s * 0.3, 0); ctx.quadraticCurveTo(s * 0.5, s * 0.6, 0, s * 0.8); ctx.quadraticCurveTo(-s * 0.5, s * 0.6, -s * 0.3, 0); ctx.quadraticCurveTo(-s * 0.4, -s * 0.3, 0, -s); }
+        ctx.fill();
+        ctx.strokeStyle = this.currentColors.stem; ctx.lineWidth = Math.max(1, s * 0.05);
+        ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(0, s * 0.7); ctx.stroke();
+        ctx.restore();
+    };
+    function initLeaves() { leafParticles = []; for (let i = 0; i < MAX_LEAF_PARTICLES; i++) { leafParticles.push(new LeafParticle()); }}
+    function manageLeaves(deltaTime, currentLeafColor1, currentLeafStemColor) {
+        leafParticles.forEach(leaf => {
+            leaf.currentColors = { leaf1: currentLeafColor1, stem: currentLeafStemColor };
+            leaf.update(deltaTime);
+            leaf.draw(); 
+        });
+    }
+
+    const NUM_BIRDS = 1; let birds = []; const BIRD_SIZE_BASE = 25; let birdSize = BIRD_SIZE_BASE;
+    let visibleHeadingsCache = []; let lastHeadingUpdateTime = 0; const HEADING_UPDATE_INTERVAL = 10000;
+    function Bird() { this.baseX = Math.random()*width; this.baseY = Math.random()*height*.6; this.x = this.baseX; this.y = this.baseY; this.size=birdSize*(Math.random()*.3+.85); this.state='FLYING_RANDOMLY'; this.targetX=Math.random()*width; this.targetY=Math.random()*(height-this.size*2)+this.size; this.speedMagnitude=(Math.random()*.6+.9)*(width/1000); this.angle=Math.random()*Math.PI*2; this.speedX=Math.cos(this.angle)*this.speedMagnitude; this.speedY=Math.sin(this.angle)*this.speedMagnitude; this.wingPosition=Math.random()*Math.PI*2; this.wingDirection=.08+Math.random()*.07; this.turnSpeed=.03+Math.random()*.02; this.targetElement=null; this.sitDuration=0; this.sitTimer=0; this.takeoffTimer=0; this.isGliding=Math.random()<.8; this.actionTimer=0; this.minGlideTime=3e3; this.maxGlideTime=7e3; this.minFlapTime=400; this.maxFlapTime=1e3; this.parallaxIntensity = 0.5; this.setNextAction(); }
+    Bird.prototype.setNextAction = function() { if(this.isGliding)this.actionTimer=this.minFlapTime+Math.random()*(this.maxFlapTime-this.minFlapTime);else this.actionTimer=this.minGlideTime+Math.random()*(this.maxGlideTime-this.minGlideTime);this.isGliding=!this.isGliding};
+    Bird.prototype.findNewTarget = function() { this.targetElement=null;if(visibleHeadingsCache.length>0&&Math.random()<.4){const randomHeading=visibleHeadingsCache[Math.floor(Math.random()*visibleHeadingsCache.length)];let headingAlreadyTargeted=!1;for(const otherBird of birds)if(otherBird!==this&&otherBird.targetElement===randomHeading.element){headingAlreadyTargeted=!0;break}if(!headingAlreadyTargeted||Math.random()<.3){this.targetElement=randomHeading.element;this.targetX=randomHeading.x;this.targetY=randomHeading.y-this.size*1.5;this.state='FLYING_TO_HEADING';return}}this.targetX=Math.random()*(width-this.size*2)+this.size;this.targetY=Math.random()*(height-this.size*2)+this.size;this.state='FLYING_RANDOMLY'};
+    Bird.prototype.update = function(deltaTime) { let dx=this.targetX-this.baseX,dy=this.targetY-this.baseY; let distance=Math.sqrt(dx*dx+dy*dy); this.wingPosition+=this.wingDirection; switch(this.state){ case'FLYING_RANDOMLY':case'FLYING_TO_HEADING':this.actionTimer-=deltaTime;if(this.actionTimer<=0)this.setNextAction();if(distance<this.speedMagnitude*20){if(this.state==='FLYING_TO_HEADING'&&this.targetElement){const rect=this.targetElement.getBoundingClientRect();const isVisible=rect.top<window.innerHeight&&rect.bottom>0&&rect.left<window.innerWidth&&rect.right>0;if(isVisible){this.state='SITTING';this.sitDuration=3e3+Math.random()*4e3;this.sitTimer=this.sitDuration;this.baseX=this.targetX;this.baseY=this.targetY}else this.findNewTarget()}else this.findNewTarget()}else{let targetAngle=Math.atan2(dy,dx);let angleDiff=targetAngle-this.angle;while(angleDiff>Math.PI)angleDiff-=Math.PI*2;while(angleDiff<-Math.PI)angleDiff+=Math.PI*2;this.angle+=Math.sign(angleDiff)*Math.min(Math.abs(angleDiff),this.turnSpeed);this.speedX=Math.cos(this.angle)*this.speedMagnitude;this.speedY=Math.sin(this.angle)*this.speedMagnitude;this.baseX+=this.speedX*(deltaTime/16.67);this.baseY+=this.speedY*(deltaTime/16.67);}break; case'SITTING':this.sitTimer-=deltaTime;if(this.sitTimer<=0){this.state='PREPARE_TAKEOFF';this.takeoffTimer=500+Math.random()*500;this.isGliding=!1;this.actionTimer=this.minFlapTime+Math.random()*(this.maxFlapTime-this.minFlapTime)}if(this.targetElement){const rect=this.targetElement.getBoundingClientRect();const isVisible=rect.top<window.innerHeight&&rect.bottom>0;if(!isVisible||Math.abs(rect.left+rect.width/2-this.baseX)>20||Math.abs(rect.top-this.size*1.5-this.baseY)>20){this.findNewTarget()}else{this.targetX=rect.left+rect.width/2;this.targetY=rect.top-this.size*1.5;this.baseX=this.targetX;this.baseY=this.targetY}}break; case'PREPARE_TAKEOFF':this.takeoffTimer-=deltaTime;if(this.takeoffTimer<=0)this.findNewTarget();break } const wrapBuffer=this.size*3; if(this.state!=='SITTING'&&this.state!=='PREPARE_TAKEOFF'){if(this.baseX<-wrapBuffer)this.baseX=width+wrapBuffer*.9;else if(this.baseX>width+wrapBuffer)this.baseX=-wrapBuffer*.9;if(this.baseY<-wrapBuffer)this.baseY=height+wrapBuffer*.9;else if(this.baseY>height+wrapBuffer)this.baseY=-wrapBuffer*.9}else{this.baseX=Math.max(this.size,Math.min(this.baseX,width-this.size));this.baseY=Math.max(this.size,Math.min(this.baseY,height-this.size))} const parallax = getParallaxOffset(this.parallaxIntensity); this.x = this.baseX + parallax.x; this.y = this.baseY + parallax.y; };
+    Bird.prototype.draw = function(birdColor) { ctx.save();ctx.translate(this.x,this.y);ctx.rotate(this.angle+Math.PI/2);ctx.fillStyle=birdColor;let wingFlap=0;const s=this.size;if(this.state==='SITTING'||this.state==='PREPARE_TAKEOFF'){wingFlap=Math.sin(this.wingPosition*.5)*.1;ctx.beginPath();ctx.moveTo(0,-s*.6);ctx.lineTo(-s*.3+wingFlap*s*.1,s*.1+wingFlap*s*.05);ctx.lineTo(-s*.2,s*.5);ctx.lineTo(0,s*.6);ctx.lineTo(s*.2,s*.5);ctx.lineTo(s*.3-wingFlap*s*.1,s*.1+wingFlap*s*.05);ctx.closePath();ctx.fill()}else{if(this.isGliding)wingFlap=Math.sin(this.wingPosition)*.15+.2;else wingFlap=Math.sin(this.wingPosition)*.6;ctx.beginPath();ctx.moveTo(0,-s*.7);ctx.quadraticCurveTo(-s*.1,-s*.5,-s*.2,0);ctx.lineTo(-s*.15,s*.6);ctx.lineTo(0,s*.8);ctx.lineTo(s*.15,s*.6);ctx.lineTo(s*.2,0);ctx.quadraticCurveTo(s*.1,-s*.5,0,-s*.7);ctx.closePath();ctx.fill();ctx.beginPath();ctx.moveTo(-s*.1,-s*.1);ctx.quadraticCurveTo(-s*.6,-s*.2+wingFlap*s*.3,-s*1.2,s*.1+wingFlap*s*.2);ctx.quadraticCurveTo(-s*.5,s*.3+wingFlap*s*.1,-s*.15,s*.15);ctx.closePath();ctx.fill();ctx.beginPath();ctx.moveTo(s*.1,-s*.1);ctx.quadraticCurveTo(s*.6,-s*.2+wingFlap*s*.3,s*1.2,s*.1+wingFlap*s*.2);ctx.quadraticCurveTo(s*.5,s*.3+wingFlap*s*.1,s*.15,s*.15);ctx.closePath();ctx.fill()}ctx.restore()};
+    function updateVisibleHeadings() { visibleHeadingsCache=[];const headingElements=document.querySelectorAll('section > h2, .education-title, #contact .contact-section > h2, .contact-form h2, .footer-section h3'); headingElements.forEach(el=>{const rect=el.getBoundingClientRect();if(rect.top<window.innerHeight&&rect.bottom>0&&rect.left<window.innerWidth&&rect.right>0){visibleHeadingsCache.push({element:el,x:rect.left+rect.width/2,y:rect.top})}})};
+    function initBirds() { birds=[];for(let i=0;i<NUM_BIRDS;i++)birds.push(new Bird());updateVisibleHeadings()};
 
 
     function setupCanvas() {
         width = window.innerWidth; height = window.innerHeight;
-        if (!canvas) return; // Added safety check
+        if (!canvas) return;
         canvas.width = width; canvas.height = height;
         const scaleFactor = Math.min(width / 1200, height / 800, 1);
         birdSize = BIRD_SIZE_BASE * scaleFactor * 1.1;
 
-        moon.init(transitionProgress); 
-        sun.init(transitionProgress);  
-
-        initStars(); initClouds(); initBirds();
+        moon.init(transitionProgress); sun.init(transitionProgress);
+        initStars(); initClouds(); initBirds(); initFog(); initLeaves(); 
         if (!halleysComet) halleysComet = new Comet();
         lastHeadingUpdateTime = Date.now();
     }
 
-    let lastFrameTime = 0; const targetFPS = 60; const frameInterval = 1000 / targetFPS;
+    let lastFrameTime = 0; const targetFPS = 60;
     function animate(currentTime) {
         requestAnimationFrame(animate);
-        const elapsed = currentTime - lastFrameTime;
-        if (elapsed < frameInterval && lastFrameTime !== 0) return;
-        lastFrameTime = currentTime - (elapsed % frameInterval);
-        if (!ctx) return; // Added safety check
+        const deltaTime = currentTime - lastFrameTime;
+        if (deltaTime < (1000 / targetFPS) && lastFrameTime !== 0) return;
+        lastFrameTime = currentTime;
+        if (!ctx) return;
 
         if (isTransitioning) {
-            const deltaTime = frameInterval;
-            if (currentTheme === 'day') {
-                transitionProgress += deltaTime / TRANSITION_DURATION;
-                if (transitionProgress >= 1) { transitionProgress = 1; isTransitioning = false; }
-            } else {
-                transitionProgress -= deltaTime / TRANSITION_DURATION;
-                if (transitionProgress <= 0) { transitionProgress = 0; isTransitioning = false; }
-            }
-            moon.updatePosition(transitionProgress);
-            sun.updatePosition(transitionProgress);
-        } else { 
-            moon.updatePosition(transitionProgress); 
-            sun.updatePosition(transitionProgress);  
+            if (currentTheme === 'day') { transitionProgress += deltaTime / TRANSITION_DURATION; if (transitionProgress >= 1) { transitionProgress = 1; isTransitioning = false; }}
+            else { transitionProgress -= deltaTime / TRANSITION_DURATION; if (transitionProgress <= 0) { transitionProgress = 0; isTransitioning = false; }}
         }
+        moon.updatePosition(transitionProgress); sun.updatePosition(transitionProgress);
 
         const currentBgStart = interpolateHexColor(N_COLORS.bgStart, D_COLORS.bgStart, transitionProgress);
         const currentBgMid = interpolateHexColor(N_COLORS.bgMid, D_COLORS.bgMid, transitionProgress);
         const currentBgEnd = interpolateHexColor(N_COLORS.bgEnd, D_COLORS.bgEnd, transitionProgress);
         const currentCloudColor = interpolateRGBAColor(N_COLORS.cloud, D_COLORS.cloud, transitionProgress);
         const currentBirdColor = interpolateHexColor(N_COLORS.bird, D_COLORS.bird, transitionProgress);
+        const currentFogColor = interpolateRGBAColor(N_COLORS.fog, D_COLORS.fog, transitionProgress);
+        const currentLeafColor1 = interpolateHexColor(N_COLORS.leafColor1, D_COLORS.leafColor1, transitionProgress);
+        const currentLeafStemColor = interpolateHexColor(N_COLORS.leafStemColor, D_COLORS.leafStemColor, transitionProgress);
 
         const gradient = ctx.createLinearGradient(0, 0, 0, height);
-        gradient.addColorStop(0, currentBgStart);
-        gradient.addColorStop(0.45, currentBgMid); 
-        gradient.addColorStop(1, currentBgEnd);   
-        
-        ctx.fillStyle = gradient; 
-        ctx.fillRect(0, 0, width, height);
+        gradient.addColorStop(0, currentBgStart); gradient.addColorStop(0.45, currentBgMid); gradient.addColorStop(1, currentBgEnd);
+        ctx.fillStyle = gradient; ctx.fillRect(0, 0, width, height);
 
         const nightElementsVisibility = 1 - transitionProgress;
         stars.forEach(star => star.update(nightElementsVisibility));
+
         moon.draw(); sun.draw();
-        if(halleysComet) halleysComet.draw(nightElementsVisibility);
+        if(halleysComet) { halleysComet.update(); halleysComet.draw(nightElementsVisibility); }
         manageFallingStars(nightElementsVisibility);
-        clouds.forEach(cloud => cloud.update(currentCloudColor));
+        
+        fogParticles.forEach(fp => { fp.update(); fp.draw(currentFogColor); });
+        
+        clouds.forEach(cloud => cloud.update(currentCloudColor)); 
+
+        manageLeaves(deltaTime, currentLeafColor1, currentLeafStemColor);
+
         if (currentTime - lastHeadingUpdateTime > HEADING_UPDATE_INTERVAL) { updateVisibleHeadings(); lastHeadingUpdateTime = currentTime; }
-        birds.forEach(bird => { bird.update(); bird.draw(currentBirdColor); });
+        birds.forEach(bird => { bird.update(deltaTime); bird.draw(currentBirdColor); });
     }
 
-    function handleMouseMove(event) { mouse.x = event.clientX; mouse.y = event.clientY; }
-    function handleMouseOut() { mouse.x = undefined; mouse.y = undefined; }
+    function handleMouseMove(event) {
+        mouse.x = event.clientX; mouse.y = event.clientY;
+        mouse.relativeX = (mouse.x / width) - 0.5;
+        mouse.relativeY = (mouse.y / height) - 0.5;
+    }
+    function handleMouseOut() {
+        mouse.relativeX += (0 - mouse.relativeX) * 0.1;
+        mouse.relativeY += (0 - mouse.relativeY) * 0.1;
+    }
+
     function debounce(func, delay) { let timeout; return function(...args) { clearTimeout(timeout); timeout = setTimeout(() => func.apply(this, args), delay); }; }
     const debouncedSetup = debounce(() => { const oldWidth = width; const oldHeight = height; setupCanvas(); if (Math.abs(oldWidth - width) > 50 || Math.abs(oldHeight - height) > 50) { birds.forEach(bird => { if (bird.state !== 'SITTING') bird.findNewTarget(); });} updateVisibleHeadings(); }, 200);
 
@@ -1940,14 +2155,15 @@ AOS.init({
         init: function() {
             if (!canvas) return;
             updateThemeColorsFromCSS();
-            setupCanvas(); 
+            setupCanvas();
             animate(0);
             window.addEventListener('resize', debouncedSetup);
             window.addEventListener('scroll', debounce(updateVisibleHeadings, 250));
-            window.addEventListener('mousemove', handleMouseMove); window.addEventListener('mouseout', handleMouseOut);
-            window.addEventListener('touchmove', (e) => { if (e.touches.length > 0) { mouse.x = e.touches[0].clientX; mouse.y = e.touches[0].clientY;}}, { passive: true });
-            window.addEventListener('touchstart', (e) => { if (e.touches.length > 0) { mouse.x = e.touches[0].clientX; mouse.y = e.touches[0].clientY;}}, { passive: true });
-            window.addEventListener('touchend', () => { mouse.x = undefined; mouse.y = undefined; });
+            document.addEventListener('mousemove', handleMouseMove);
+            document.addEventListener('mouseleave', handleMouseOut);
+            window.addEventListener('touchmove', (e) => { if (e.touches.length > 0) { mouse.x = e.touches[0].clientX; mouse.y = e.touches[0].clientY; mouse.relativeX = (mouse.x / width) - 0.5; mouse.relativeY = (mouse.y / height) - 0.5;}}, { passive: true });
+            window.addEventListener('touchstart', (e) => { if (e.touches.length > 0) { mouse.x = e.touches[0].clientX; mouse.y = e.touches[0].clientY; mouse.relativeX = (mouse.x / width) - 0.5; mouse.relativeY = (mouse.y / height) - 0.5;}}, { passive: true });
+            window.addEventListener('touchend', handleMouseOut);
         },
         switchToDay: function() { if (currentTheme === 'day' && !isTransitioning) return; currentTheme = 'day'; isTransitioning = true; },
         switchToNight: function() { if (currentTheme === 'night' && !isTransitioning) return; currentTheme = 'night'; isTransitioning = true; },
@@ -1961,31 +2177,22 @@ AOS.init({
 
 
   document.addEventListener('DOMContentLoaded', function() {
-    // --- Title Management Variables ---
     let originalPageTitle = document.title;
     const comeBackTitle = "Come back to my portfolio 🥺 !";
     let currentDynamicPageTitle = originalPageTitle;
 
-    // --- Helper Function to Format Section Name for Title ---
     function formatSectionName(id) {
-        if (!id) return "Portfolio"; // Fallback if id is somehow undefined
+        if (!id) return "Portfolio";
         const cleanedId = id.toLowerCase();
-
         if (cleanedId === "index.html" || cleanedId === "hero") return "Home";
         switch (cleanedId) {
-            case "education": return "Education";
-            case "about": return "About Me";
-            case "skills": return "Skills";
-            case "experience": return "Experience";
-            case "portfolio": return "Projects";
-            case "contact": return "Contact Me";
-            default:
-                // Capitalize first letter of each word, replace hyphens
-                return id.replace(/-/g, ' ').replace(/\b\w/g, char => char.toUpperCase());
+            case "education": return "Education"; case "about": return "About Me";
+            case "skills": return "Skills"; case "experience": return "Experience";
+            case "portfolio": return "Projects"; case "contact": return "Contact Me";
+            default: return id.replace(/-/g, ' ').replace(/\b\w/g, char => char.toUpperCase());
         }
     }
 
-    // --- Initialize Canvas ---
     const savedThemeForCanvas = localStorage.getItem('portfolioTheme') || 'night';
     if (nightSkyCanvasController && nightSkyCanvasController.setInitialTheme) {
         nightSkyCanvasController.setInitialTheme(savedThemeForCanvas);
@@ -1994,49 +2201,39 @@ AOS.init({
         nightSkyCanvasController.init();
     }
 
-    // --- Typed.js ---
     if (document.querySelector('.auto-type')) {
       var typed = new Typed(".auto-type", { strings: ["Full Stack Developer", "MERN Stack Specialist", "Creative Web Designer", "Passionate Tech Enthusiast", "Innovative Problem Solver"], typeSpeed: 60, backSpeed: 30, backDelay: 1500, loop: true, smartBackspace: true });
     }
 
-    // --- Hamburger Menu ---
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
     const menuIcon = hamburger ? hamburger.querySelector('img') : null;
-    const navListForHamburger = navLinks ? navLinks.querySelector('.nav-list') : null; 
-    
+    const navListForHamburger = navLinks ? navLinks.querySelector('.nav-list') : null;
+
     if (hamburger && navLinks && menuIcon) {
-      hamburger.addEventListener('click', () => { 
-        navLinks.classList.toggle('active'); 
-        if (navLinks.classList.contains('active')) { 
-            menuIcon.src = 'assets/images/close.png'; 
-            menuIcon.alt = 'close menu icon'; 
-        } else { 
-            menuIcon.src = 'assets/images/menu.png'; 
-            menuIcon.alt = 'menu toggle icon'; 
-        } 
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        menuIcon.src = navLinks.classList.contains('active') ? 'assets/images/close.png' : 'assets/images/menu.png';
+        menuIcon.alt = navLinks.classList.contains('active') ? 'close menu icon' : 'menu toggle icon';
       });
       if (navListForHamburger) {
-          navListForHamburger.querySelectorAll('a').forEach(link => { 
-              link.addEventListener('click', () => { 
-                  if (navLinks.classList.contains('active')) { 
-                      navLinks.classList.remove('active'); 
-                      menuIcon.src = 'assets/images/menu.png'; 
-                      menuIcon.alt = 'menu toggle icon'; 
-                  } 
-              }); 
+          navListForHamburger.querySelectorAll('a').forEach(link => {
+              link.addEventListener('click', () => {
+                  if (navLinks.classList.contains('active')) {
+                      navLinks.classList.remove('active');
+                      menuIcon.src = 'assets/images/menu.png'; menuIcon.alt = 'menu toggle icon';
+                  }
+              });
           });
       }
     }
 
-    // --- Scroll to Top Button ---
     const scrollTopBtn = document.querySelector('.scroll-top');
     if (scrollTopBtn) {
-      window.addEventListener('scroll', () => { if (window.scrollY > 300) scrollTopBtn.classList.add('visible'); else scrollTopBtn.classList.remove('visible'); });
+      window.addEventListener('scroll', () => { scrollTopBtn.classList.toggle('visible', window.scrollY > 300); });
       scrollTopBtn.addEventListener('click', (e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
     }
 
-    // --- Progress Bar ---
     const progressBar = document.querySelector('#progress-bar .bar');
     const siteHeader = document.querySelector('.site-header');
     const progressBarContainer = document.getElementById('progress-bar');
@@ -2047,7 +2244,6 @@ AOS.init({
        window.addEventListener('resize', setProgressBarTop);
     }
 
-    // --- Active Navigation Link and Page Title Update on Scroll ---
     const navListItems = document.querySelectorAll('.nav-list a');
     const pageSections = document.querySelectorAll('section[id]');
     const headerHeight = siteHeader ? siteHeader.offsetHeight : 70;
@@ -2055,57 +2251,40 @@ AOS.init({
     function changeActiveLinkAndTitle() {
         let index = pageSections.length;
         while(--index >= 0 && window.scrollY + headerHeight + 50 < pageSections[index].offsetTop) {}
-
         navListItems.forEach((link) => link.classList.remove('active'));
-
         const homeLink = document.querySelector('.nav-list a[href="index.html"]');
-        let currentSectionIdForTitle = "hero"; // Default for title
-
+        let currentSectionIdForTitle = "hero";
         if (index >= 0 && pageSections[index] && window.scrollY + headerHeight + 50 >= pageSections[index].offsetTop - pageSections[index].offsetHeight / 2) {
             const activeNavLink = document.querySelector(`.nav-list a[href="#${pageSections[index].id}"]`);
-            if (activeNavLink) {
-                activeNavLink.classList.add('active');
-                currentSectionIdForTitle = pageSections[index].id;
-            }
+            if (activeNavLink) { activeNavLink.classList.add('active'); currentSectionIdForTitle = pageSections[index].id; }
         } else if (homeLink && window.scrollY < (pageSections.length > 0 ? pageSections[0].offsetTop - headerHeight - 50 : 200)) {
-             // If scrolled to the very top, activate home link
-            if (homeLink) homeLink.classList.add('active');
-            currentSectionIdForTitle = "hero"; // "hero" or "index.html" can be used for Home
+            if (homeLink) homeLink.classList.add('active'); currentSectionIdForTitle = "hero";
         } else if (pageSections.length === 0 && homeLink) {
-            // Case where there are no sections, only home
-            homeLink.classList.add('active');
-            currentSectionIdForTitle = "hero";
+            homeLink.classList.add('active'); currentSectionIdForTitle = "hero";
         }
-        
-        // Update page title
         const formattedName = formatSectionName(currentSectionIdForTitle);
         currentDynamicPageTitle = `Shobhit Tomar | ${formattedName}`;
-        if (!document.hidden) {
-            document.title = currentDynamicPageTitle;
-        }
+        if (!document.hidden) document.title = currentDynamicPageTitle;
     }
 
     if (pageSections.length > 0 || document.querySelector('.nav-list a[href="index.html"]')) {
-        changeActiveLinkAndTitle(); // Set initial active link and title
+        changeActiveLinkAndTitle();
         window.addEventListener('scroll', changeActiveLinkAndTitle);
     }
 
-
-    // --- Contact Form Submission ---
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(event) {
             event.preventDefault(); const formData = new FormData(contactForm); const formAction = contactForm.getAttribute('action');
-            const submitButton = contactForm.querySelector('button[type="submit"]'); const originalButtonText = submitButton.innerHTML;
+            const submitButton = contactForm.querySelector('button[type="submit"]');
             if(submitButton) { submitButton.disabled = true; submitButton.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin"></i>'; }
             fetch(formAction, { method: 'POST', body: formData, headers: { 'Accept': 'application/json' }})
             .then(response => response.ok ? response.json().catch(() => ({ success: true })) : response.json().catch(() => ({ success: false })))
-            .then(data => { window.location.href = 'thankyou.html'; }) 
-            .catch(error => { console.error('Form submission error:', error); window.location.href = 'thankyou.html'; }); 
+            .then(data => { window.location.href = 'thankyou.html'; })
+            .catch(error => { console.error('Form submission error:', error); window.location.href = 'thankyou.html'; });
         });
     }
 
-    // --- Theme Toggle ---
     const themeToggleButton = document.getElementById('theme-toggle');
     const body = document.body;
     const toggleIcon = themeToggleButton ? themeToggleButton.querySelector('i') : null;
@@ -2125,7 +2304,7 @@ AOS.init({
     }
 
     const initialDOMTheme = localStorage.getItem('portfolioTheme') || 'night';
-    applyThemeDOM(initialDOMTheme); // Apply initial theme directly
+    applyThemeDOM(initialDOMTheme);
 
     if (themeToggleButton && toggleIcon) {
         themeToggleButton.addEventListener('click', () => {
@@ -2134,13 +2313,8 @@ AOS.init({
         });
     }
 
-    // --- Tab Visibility Title Change ---
     document.addEventListener('visibilitychange', function() {
-        if (document.hidden) {
-            document.title = comeBackTitle;
-        } else {
-            document.title = currentDynamicPageTitle; // Restore to the last dynamic title
-        }
+        document.title = document.hidden ? comeBackTitle : currentDynamicPageTitle;
     });
 
   });

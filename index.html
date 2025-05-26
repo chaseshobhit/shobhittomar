@@ -2213,7 +2213,7 @@ AOS.init({
     if (hamburger && navLinks && menuIcon) {
       hamburger.addEventListener('click', () => {
         navLinks.classList.toggle('active');
-        menuIcon.src = navLinks.classList.contains('active') ? 'assets/images/close.png' : 'assets/images/menu.png';
+        menuIcon.src = navLinks.classList.contains('active') ? 'assets/images/menu.png' : 'assets/images/menu.png';
         menuIcon.alt = navLinks.classList.contains('active') ? 'close menu icon' : 'menu toggle icon';
       });
       if (navListForHamburger) {

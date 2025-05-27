@@ -186,8 +186,8 @@
         --cv-night-comet-glow: rgba(180, 200, 255, 0.5);
         --cv-night-falling-star-head: rgba(255, 255, 240, 1);
         --cv-night-falling-star-tail: rgba(255, 255, 230, 0.5);
-        --cv-night-fog: rgba(70, 80, 100, 0.28); /* MODIFIED: Reduced alpha */
-        --cv-night-leaf-color-1: #203020; 
+        --cv-night-fog: rgba(70, 80, 100, 0.28);
+        --cv-night-leaf-color-1: #203020;
         --cv-night-leaf-stem-color: #152015;
 
 
@@ -199,7 +199,7 @@
         --cv-day-sun-glow: rgba(255, 223, 0, 0.7);
         --cv-day-cloud: rgba(255, 255, 255, 0.80);
         --cv-day-bird: #4A4A4A;
-        --cv-day-fog: rgba(220, 230, 240, 0.45); /* Adjusted day fog for visibility */
+        --cv-day-fog: rgba(220, 230, 240, 0.45);
         --cv-day-leaf-color-1: #558B2F;
         --cv-day-leaf-stem-color: #4CAF50;
       }
@@ -495,15 +495,15 @@
         border: none;
         cursor: pointer;
       }
-      .hamburger img {
+      .hamburger .hamburger-icon-fa {
+        font-size: 26px;
+        color: var(--nav-logo-icon);
+        line-height: 1;
+        transition: color 0.3s ease;
+        display: inline-block;
         width: 28px;
-        height: 28px;
-        filter: invert(95%) sepia(6%) saturate(132%) hue-rotate(190deg) brightness(113%) contrast(92%);
+        text-align: center;
       }
-      body.day-theme .hamburger img {
-          filter: none;
-      }
-
 
       #theme-toggle {
         position: fixed;
@@ -512,9 +512,9 @@
         background-color: var(--theme-toggle-bg);
         border: none;
         color: var(--theme-toggle-icon);
-        font-size: 2rem;
+        font-size: 1.5rem;
         cursor: pointer;
-        padding: 0.6rem;
+        padding: 0.5rem;
         border-radius: 50%;
         width: 50px;
         height: 50px;
@@ -523,7 +523,10 @@
         justify-content: center;
         box-shadow: var(--theme-toggle-shadow);
         z-index: 1001;
-        transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease,
+                    width 0.3s ease, height 0.3s ease, font-size 0.3s ease;
+        opacity: 1 !important;
+        visibility: visible !important;
       }
       #theme-toggle:hover {
         background-color: var(--theme-toggle-hover-bg);
@@ -1231,7 +1234,7 @@
             width: 44px;
             height: 44px;
             font-size: 1.2rem;
-            padding: 0.5rem;
+            /* padding: 0.5rem; /* Already set in #theme-toggle base style */
             bottom: 15px;
          }
          #theme-toggle { left: 15px; }
@@ -1260,6 +1263,69 @@
         .education-card { flex-direction: column; text-align: center; }
         .education-card-image img { margin-right: 0; margin-bottom: 15px; width:80px; height:80px;}
 
+        /* --- About Me Section Centering --- */
+        .about-container-left .about-text,
+        .about-container-left .about-text p {
+            text-align: center;
+        }
+        .about-text h3 { /* Also center the "I'm Shobhit" heading */
+            text-align: center;
+        }
+        .about-container-left .about-text .email,
+        .about-container-left .about-text .place {
+             display: flex;
+             justify-content: center;
+             align-items: center;
+        }
+        .about-container-left .resume-button {
+            margin-left: auto;
+            margin-right: auto;
+            display: table;
+        }
+        .about-container-right {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            flex: 1 1 100%;
+            margin-top: 20px; /* Give some space from text above */
+        }
+        /* .image-container img remains centered by its parent */
+
+
+        /* --- Skills Section Centering --- */
+        .skill-category h3 {
+            display: block;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            border-bottom: var(--skill-category-border); /* Keep border */
+            padding-bottom: 10px; /* Keep padding for border */
+            margin-bottom: 20px;
+        }
+        .skill-items {
+            justify-content: center;
+        }
+
+        /* --- Experience Section - Minimal centering for readability --- */
+        .experience-card .company-info {
+            flex-direction: column; /* Stack logo and company name */
+            align-items: center; /* Center items in the column */
+        }
+        .experience-card .company-logo {
+            margin-right: 0; /* Remove side margin */
+            margin-bottom: 10px; /* Add space below logo */
+        }
+         .experience-card .company-info h3,
+         .experience-card .location,
+         .experience-card .job-title {
+            text-align: center;
+         }
+         .experience-card ul {
+            padding-left: 10px; /* Reduce padding but keep some for bullets */
+            text-align: left; /* Keep bullet points text left-aligned for readability */
+         }
+
+
         .timeline::before { left: 12px; }
         .timeline-item { padding-left: 35px; }
         .timeline-circle { left: 0px; width: 20px; height: 20px; }
@@ -1267,9 +1333,51 @@
         .education-card, .skill-category, .experience-card, .contact-content {
             padding: 15px;
         }
-        .contact-form h2 { font-size: 1.5rem;}
+
+        /* --- Projects Section Centering --- */
+        .portfolio-item .layer-content {
+            text-align: center;
+        }
+        .portfolio-item .layer-content h3,
+        .portfolio-item .layer-content p {
+            text-align: center;
+        }
+        .portfolio-item .buttons {
+            justify-content: center;
+        }
+        .portfolio-item img {
+             height: 200px;
+        }
+
+
+        /* --- Contact Section Centering --- */
+        .contact-form h2 {
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        /* Contact image is already centered */
 
         .about-text h3 {font-size: 1.5rem;}
+
+
+        /* --- Footer Section Centering --- */
+        .footer-section {
+            text-align: center;
+        }
+        .footer-section .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        .footer-section .contact-info .contact-item,
+        .footer-section .contact-info .location {
+            justify-content: center;
+            text-align: center; /* Ensure text within is also centered if not flex items */
+        }
+        .footer-section .contact-info .contact-item i,
+        .footer-section .contact-info .location i {
+            margin-right: 8px; /* Add a bit of space between icon and text */
+        }
       }
 
       @media (max-width: 375px) {
@@ -1368,11 +1476,12 @@
         </a>
       </div>
       <div class="nav-controls">
-        <button class="hamburger">
-          <img src="assets/images/menu.png" alt="menu toggle icon" />
+        <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav-links">
+          <i class="fas fa-bars hamburger-icon-fa" id="hamburger-open-icon"></i>
+          <i class="fas fa-times hamburger-icon-fa" id="hamburger-close-icon" style="display: none;"></i>
         </button>
       </div>
-      <div class="nav-links">
+      <div class="nav-links" id="main-nav-links">
         <ul class="nav-list">
           <li><a href="index.html">Home</a></li>
           <li><a href="#education">Education</a></li>
@@ -1960,41 +2069,41 @@ AOS.init({
     let clouds = []; const CLOUD_COUNT_TARGET = 7; const CLOUD_MOUSE_RADIUS_EFFECT = 150; function Cloud(x,y,speed,numPuffs,baseSize) { this.baseX = x; this.initialY = y; this.y = y; this.speed = speed; this.puffs=[]; this.baseSize = baseSize; this.parallaxIntensity = Math.random() * 0.2 + 0.2; for(let i=0;i<numPuffs;i++){this.puffs.push({dx:(Math.random()-.5)*baseSize*1.6,dy:(Math.random()-.5)*baseSize*.5,radius:(Math.random()*.5+.3)*baseSize*.6})}} Cloud.prototype.draw = function(cloudColor) { ctx.fillStyle=cloudColor; this.puffs.forEach(puff=>{ctx.beginPath();ctx.arc(this.currentX+puff.dx,this.currentY+puff.dy,puff.radius,0,Math.PI*2);ctx.fill()})}; Cloud.prototype.update = function(cloudColor) { this.baseX += this.speed; const visualWidth = this.baseSize * 2; if (this.speed > 0 && this.baseX - visualWidth > width) { this.baseX = -visualWidth - Math.random()*50; this.initialY = Math.random()*height*.4 + height*.05; } else if (this.speed < 0 && this.baseX + visualWidth < 0) { this.baseX = width + visualWidth + Math.random()*50; this.initialY = Math.random()*height*.4 + height*.05; } let targetY = this.initialY; const parallax = getParallaxOffset(this.parallaxIntensity); this.currentX = this.baseX + parallax.x; const cloudCenterYForMouse = this.y + parallax.y; if (mouse.x !== undefined && mouse.y !== undefined) { const distToMouseX = mouse.x - this.currentX; const distToMouseY = mouse.y - cloudCenterYForMouse; const distance = Math.sqrt(distToMouseX*distToMouseX + distToMouseY*distToMouseY); if (distance < CLOUD_MOUSE_RADIUS_EFFECT + this.baseSize) { const influence = 1 - distance / (CLOUD_MOUSE_RADIUS_EFFECT + this.baseSize); targetY += (this.y - mouse.y) * 0.02 * influence * 2.5; }} this.y += (targetY - this.y) * 0.04; this.currentY = this.y + parallax.y; this.draw(cloudColor);}; function initClouds() { clouds=[];const cloudCount=Math.min(CLOUD_COUNT_TARGET,Math.floor(width/200));for(let i=0;i<cloudCount;i++){const speed=(Math.random()*.85+.35)*(Math.random()<.5?1:-1)*(width/1000);const baseSize=(Math.random()*20+10)*(width/1200+.4);const x=Math.random()*width;const y=Math.random()*height*.4+height*.05;const numPuffs=Math.floor(Math.random()*3)+3;clouds.push(new Cloud(x,y,speed,numPuffs,baseSize))}}
 
     // Fog System
-    let fogParticles = []; 
-    const FOG_PARTICLE_COUNT = 40; // MODIFIED: Reduced count for scatter
-    const FOG_BASE_SPEED_X = 0.3;  // Increased base speed
-    const FOG_SPEED_X_VAR = 0.15; // Increased speed variation
+    let fogParticles = [];
+    const FOG_PARTICLE_COUNT = 40;
+    const FOG_BASE_SPEED_X = 0.3;
+    const FOG_SPEED_X_VAR = 0.15;
 
     function FogParticle() {
         this.x = Math.random() * width;
-        this.y = Math.random() * height; 
-        this.radius = Math.random() * 50 + 30 * (width / 1200); // MODIFIED: Slightly smaller base radius
-        this.opacity = Math.random() * 0.25 + 0.10; // MODIFIED: Reduced individual opacity for scatter
-        this.speedX = FOG_BASE_SPEED_X + Math.random() * FOG_SPEED_X_VAR; 
-        this.speedY = 0; 
-        this.parallaxIntensity = Math.random() * 0.06 + 0.03; 
+        this.y = Math.random() * height;
+        this.radius = Math.random() * 50 + 30 * (width / 1200);
+        this.opacity = Math.random() * 0.25 + 0.10;
+        this.speedX = FOG_BASE_SPEED_X + Math.random() * FOG_SPEED_X_VAR;
+        this.speedY = 0;
+        this.parallaxIntensity = Math.random() * 0.06 + 0.03;
     }
     FogParticle.prototype.update = function() {
         this.x += this.speedX;
 
         if (this.speedX > 0 && this.x - this.radius > width) {
-             this.x = -this.radius - Math.random() * width * 0.3; 
-             this.y = Math.random() * height; 
+             this.x = -this.radius - Math.random() * width * 0.3;
+             this.y = Math.random() * height;
         }
     };
     FogParticle.prototype.draw = function(fogColor) {
         const parallax = getParallaxOffset(this.parallaxIntensity);
         const currentX = this.x + parallax.x;
-        const currentY = this.y + parallax.y; 
+        const currentY = this.y + parallax.y;
 
         ctx.save();
         const targetAlphaMatch = fogColor.match(/rgba?\(.*,\s*([\d.]+)\)/);
-        const targetAlpha = targetAlphaMatch ? parseFloat(targetAlphaMatch[1]) : 0.2; 
+        const targetAlpha = targetAlphaMatch ? parseFloat(targetAlphaMatch[1]) : 0.2;
 
-        const alphaScaleFactor = targetAlpha / 0.25; 
+        const alphaScaleFactor = targetAlpha / 0.25;
         const particleEffectiveOpacity = Math.min(1, this.opacity * alphaScaleFactor);
 
-        const centerColorAlpha = Math.min(1, particleEffectiveOpacity * 0.7); 
+        const centerColorAlpha = Math.min(1, particleEffectiveOpacity * 0.7);
         const centerColor = fogColor.replace(/[\d.]+(?=\))/, centerColorAlpha.toFixed(3) );
         const edgeColor = fogColor.replace(/[\d.]+(?=\))/, '0');
 
@@ -2020,7 +2129,7 @@ AOS.init({
     LeafParticle.prototype.respawn = function() {
         this.size = Math.random() * 8 + 5 * (Math.min(width, height) / 800);
         this.type = Math.random() < 0.6 ? 'oval' : 'pointed';
-        const spawnEdge = Math.floor(Math.random() * 3); 
+        const spawnEdge = Math.floor(Math.random() * 3);
         if (spawnEdge === 0) { this.baseX = -this.size * 2 - Math.random() * 50; this.baseY = Math.random() * height * 0.8; this.speedX = Math.random() * 0.8 + 0.4; }
         else if (spawnEdge === 1) { this.baseX = width + this.size * 2 + Math.random() * 50; this.baseY = Math.random() * height * 0.8; this.speedX = -(Math.random() * 0.8 + 0.4); }
         else { this.baseX = Math.random() * width; this.baseY = -this.size * 2 - Math.random() * 30; this.speedX = (Math.random() - 0.5) * 0.6; }
@@ -2047,7 +2156,7 @@ AOS.init({
         }
     };
     LeafParticle.prototype.draw = function() {
-        const visibilityFactor = Math.max(0, Math.min(1, (transitionProgress - 0.05) / 0.4)); 
+        const visibilityFactor = Math.max(0, Math.min(1, (transitionProgress - 0.05) / 0.4));
         if (this.opacity * visibilityFactor <= 0.01) return;
 
         ctx.save(); ctx.translate(this.x, this.y); ctx.rotate(this.rotation);
@@ -2066,7 +2175,7 @@ AOS.init({
         leafParticles.forEach(leaf => {
             leaf.currentColors = { leaf1: currentLeafColor1, stem: currentLeafStemColor };
             leaf.update(deltaTime);
-            leaf.draw(); 
+            leaf.draw();
         });
     }
 
@@ -2089,7 +2198,7 @@ AOS.init({
         birdSize = BIRD_SIZE_BASE * scaleFactor * 1.1;
 
         moon.init(transitionProgress); sun.init(transitionProgress);
-        initStars(); initClouds(); initBirds(); initFog(); initLeaves(); 
+        initStars(); initClouds(); initBirds(); initFog(); initLeaves();
         if (!halleysComet) halleysComet = new Comet();
         lastHeadingUpdateTime = Date.now();
     }
@@ -2127,10 +2236,10 @@ AOS.init({
         moon.draw(); sun.draw();
         if(halleysComet) { halleysComet.update(); halleysComet.draw(nightElementsVisibility); }
         manageFallingStars(nightElementsVisibility);
-        
+
         fogParticles.forEach(fp => { fp.update(); fp.draw(currentFogColor); });
-        
-        clouds.forEach(cloud => cloud.update(currentCloudColor)); 
+
+        clouds.forEach(cloud => cloud.update(currentCloudColor));
 
         manageLeaves(deltaTime, currentLeafColor1, currentLeafStemColor);
 
@@ -2207,26 +2316,44 @@ AOS.init({
 
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
-    const menuIcon = hamburger ? hamburger.querySelector('img') : null;
+
+    const openIcon = hamburger ? hamburger.querySelector('#hamburger-open-icon') : null;
+    const closeIcon = hamburger ? hamburger.querySelector('#hamburger-close-icon') : null;
+
     const navListForHamburger = navLinks ? navLinks.querySelector('.nav-list') : null;
 
-    if (hamburger && navLinks && menuIcon) {
+    if (hamburger && navLinks && openIcon && closeIcon) {
       hamburger.addEventListener('click', () => {
         navLinks.classList.toggle('active');
-        menuIcon.src = navLinks.classList.contains('active') ? 'assets/images/menu.png' : 'assets/images/menu.png';
-        menuIcon.alt = navLinks.classList.contains('active') ? 'close menu icon' : 'menu toggle icon';
+        const isActive = navLinks.classList.contains('active');
+
+        if (isActive) {
+          openIcon.style.display = 'none';
+          closeIcon.style.display = 'inline-block';
+          hamburger.setAttribute('aria-label', 'Close menu');
+        } else {
+          openIcon.style.display = 'inline-block';
+          closeIcon.style.display = 'none';
+          hamburger.setAttribute('aria-label', 'Open menu');
+        }
+        hamburger.setAttribute('aria-expanded', isActive.toString());
       });
+
       if (navListForHamburger) {
           navListForHamburger.querySelectorAll('a').forEach(link => {
               link.addEventListener('click', () => {
                   if (navLinks.classList.contains('active')) {
                       navLinks.classList.remove('active');
-                      menuIcon.src = 'assets/images/menu.png'; menuIcon.alt = 'menu toggle icon';
+                      openIcon.style.display = 'inline-block';
+                      closeIcon.style.display = 'none';
+                      hamburger.setAttribute('aria-expanded', 'false');
+                      hamburger.setAttribute('aria-label', 'Open menu');
                   }
               });
           });
       }
     }
+
 
     const scrollTopBtn = document.querySelector('.scroll-top');
     if (scrollTopBtn) {
